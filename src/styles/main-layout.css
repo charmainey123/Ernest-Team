@@ -1,0 +1,16 @@
+.container {
+    background-image: 
+    url(../img/office_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    background-repeat:no-repeat;
+  }
+
+  .left-avatar {
+    position: absolute;
+    left: 15%;
+    top: 10%;
+  }
+  
