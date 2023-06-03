@@ -1,6 +1,8 @@
+-- Drop existing tables if they exist
 DROP TABLE IF EXISTS public.existing_clients;
 DROP TABLE IF EXISTS public.account_form;
 
+-- Create the "existing_clients" table
 CREATE TABLE IF NOT EXISTS public.existing_clients
 (
     client_id character(30) NOT NULL,
@@ -9,8 +11,10 @@ CREATE TABLE IF NOT EXISTS public.existing_clients
     mobile_number character(10),
     id_number character varying(50),
     country_of_tax_registration character varying(50),
-    tax_identification_number character varying(50),
-)
+    tax_identification_number character varying(50)
+);
+
+-- Create the "account_form" table
 CREATE TABLE IF NOT EXISTS public.account_form
 (
     full_name character varying(50) NOT NULL,
@@ -20,9 +24,9 @@ CREATE TABLE IF NOT EXISTS public.account_form
     id_number character varying(50) NOT NULL,
     country_of_tax_residence character varying(30) NOT NULL,
     tax_identification_number character varying(50) NOT NULL
-)
+);
 
-ALTER TABLE public.existing_clients
-    OWNER to postgres;
-ALTER TABLE public.account_form
-    OWNER to postgres;
+-- Set the table ownership to the "postgres" user
+
+ALTER TABLE public.existing_clients OWNER to postgres;
+ALTER TABLE public.account_form OWNER to postgres;
