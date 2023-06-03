@@ -1,0 +1,2 @@
+INSERT INTO existing_clients (client_id, full_name, email_address, mobile_number, id_number, country_of_tax_registration, tax_identification_number)
+VALUES ('23430483', 'Sarah Tan', 'sarah.tan@gmail.com', '83459394', 'S1111111X', 'Singapore', 'S1111111X');

@@ -1,0 +1,28 @@
+DROP TABLE IF EXISTS public.existing_clients;
+DROP TABLE IF EXISTS public.account_form;
+
+CREATE TABLE IF NOT EXISTS public.existing_clients
+(
+    client_id character(30) NOT NULL,
+    full_name character varying(50),
+    email_address character varying(50),
+    mobile_number character(10),
+    id_number character varying(50),
+    country_of_tax_registration character varying(50),
+    tax_identification_number character varying(50),
+)
+CREATE TABLE IF NOT EXISTS public.account_form
+(
+    full_name character varying(50) NOT NULL,
+    email_address character varying(50) NOT NULL,
+    mobile_number character(10) NOT NULL,
+    account_currency_code character varying(10) NOT NULL,
+    id_number character varying(50) NOT NULL,
+    country_of_tax_residence character varying(30) NOT NULL,
+    tax_identification_number character varying(50) NOT NULL
+)
+
+ALTER TABLE public.existing_clients
+    OWNER to postgres;
+ALTER TABLE public.account_form
+    OWNER to postgres;
