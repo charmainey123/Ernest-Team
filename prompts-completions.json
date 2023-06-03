@@ -1,0 +1,14 @@
+[
+    {
+        "prompt": "I am not sure which bank product suit me.",
+        "completion": "We have a range of bank products that cater to different needs, I can understand that can be confusing for you. Allow me to first understand whether you are looking for current accounts or savings account?"
+    },
+    {
+        "prompt": "I am looking at opening a savings account but I am not sure which to open.",
+        "completion": "For savings account, I would recommend opening an e$aver savings account. This is currently our most popular savings account that allows you to earn up to 3.40% per annum interest on eligible spend!"
+    },
+    {
+        "prompt": "I am looking for something that can grow my savings.",
+        "completion": "You may consider opening an e$aver savings account. This is currently our most popular savings account that allows you to earn up to 3.40% per annum interest on eligible spend! For current accounts, I would highly recommend our Bonus$aver account which gives up to 7.88% interest per annum."
+    }
+]
