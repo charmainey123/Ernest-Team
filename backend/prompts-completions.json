@@ -1,7 +1,4 @@
-// <55 - current = XtraSaver, saving = e$aver
-// >55 - current = XtraSaver, savings = MyWay
 [
-    //general questions on accounts - variation one
     {
         "prompt": "What are the list of accounts that Standard Chartered Bank provide?\n\n###\n\n",
         "completion": "We have a wide range of products to cater to our clients' needs, what type of account are you looking for?"
@@ -11,7 +8,6 @@
         "completion": "We have two types of accounts, mainly Current Accounts and Savings Accounts. Current Accounts are recommended for everyday use, while Savings Account are recommended for general saving. Which type of account are you looking for?"
     },
     
-    //general questions on accounts - variation two
     {
         "prompt": "What are the accounts that the Bank have?\n\n###\n\n",
         "completion": "We have a wide range of products to cater to our clients' needs, what type of account are you looking for?"
@@ -21,7 +17,6 @@
         "completion": "We have two types of accounts, mainly Current Accounts and Savings Accounts. Current Accounts are recommended for everyday use, while Savings Account are recommended for general saving. Which type of account are you looking for?"
     },
 
-    //general questions on accounts - variation three
     {
         "prompt": "What accounts are there?\n\n###\n\n",
         "completion": "We have a wide range of products to cater to our clients' needs, what type of account are you looking for?"
@@ -30,8 +25,6 @@
         "prompt": "What type of accounts are there?\n\n###\n\n",
         "completion": "We have two types of accounts, mainly Current Accounts and Savings Accounts. Current Accounts are recommended for everyday use, while Savings Account are recommended for general saving. Which type of account are you looking for?"
     },
-
-    //assistance one - choosing type of account - variation one
     {
         "prompt": "Which type of account do you think suits me?\n\n###\n\n",
         "completion": "No worries, I can help. Would you be using your account for daily transactions, or are you looking to stash your cash?"
@@ -56,8 +49,6 @@
         "prompt": "I am more interested in gaining interest by depositing fresh funds.\n\n###\n\n",
         "completion": "If that is the case, I would recommend you to open a Savings Account."
     },
-
-    //assistance one - choosing type of account - variation two
     {
         "prompt": "I am not sure which type of account suit me.\n\n###\n\n",
         "completion": "No worries, I can help. Would you be using your account for daily transactions, or are you looking to stash your cash?"
@@ -82,8 +73,6 @@
         "prompt": "I prefer gaining interest by depositing fresh funds.\n\n###\n\n",
         "completion": "If that is the case, I would recommend you to open a Savings Account."
     },
-
-    //assistance one - choosing type of account - variation three
     {
         "prompt": "I am not sure which type of account to choose.\n\n###\n\n",
         "completion": "No worries, I can help. Would you be using your account for daily transactions, or are you looking to stash your cash?"
@@ -108,8 +97,6 @@
         "prompt": "Gaining interest by depositing fresh funds suits me more.\n\n###\n\n",
         "completion": "If that is the case, I would recommend you to open a Savings Account."
     },
-
-    //assistance two - deciding type of account - variation one
     {
         "prompt": "I am looking for a Current Account.\n\n###\n\n",
         "completion": "No problem, which Current Account would you like to apply for?"
@@ -126,8 +113,6 @@
         "prompt": "Which Savings Account do you recommend?\n\n###\n\n",
         "completion": "Before I recommend, I would like to understand more about you. Firstly, which age range do you fall under? Under 18, between 18 and 55, or above 55?"
     },
-    
-    //assistance two - deciding type of account - variation two
     {
         "prompt": "I want to apply for a Current Account.\n\n###\n\n",
         "completion": "No problem, which Current Account would you like to apply for?"
@@ -144,8 +129,6 @@
         "prompt": "Can you recommend a Savings Account?\n\n###\n\n",
         "completion": "Before I recommend, I would like to understand more about you. Firstly, which age range do you fall under? Under 18, between 18 and 55, or above 55?"
     },
-
-    //assistance two - deciding type of account - variation three
     {
         "prompt": "Can you help me apply for a Current Account?\n\n###\n\n",
         "completion": "No problem, which Current Account would you like to apply for?"
@@ -162,8 +145,6 @@
         "prompt": "I am not sure which Savings Account to apply for.\n\n###\n\n",
         "completion": "No problem, I can help to recommend. Before I do so, I would like to understand more about you. Firstly, which age range do you fall under? Under 18, between 18 and 55, or above 55?"
     },
-
-    //categorisation one - age
     {
         "prompt": "I am under 18.\n\n###\n\n",
         "completion": "I am sorry, but we require applicants to our Accounts to be at least 18 of age."
@@ -176,73 +157,54 @@
         "prompt": "I am above 55.\n\n###\n\n",
         "completion": "Great, may I know what is the purpose of your account creation?"
     },
-
-    //categorisation two - purpose of account - variation one
     {
-        //18-55
         "prompt": "I would like to grow my savings.\n\n###\n\n",
         "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, e$aver."
     },
     {
-        //18-55
         "prompt": "I would like an all purpose account.\n\n###\n\n",
         "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Current Account, XtraSaver."
     },
     {
-        //>55
         "prompt": "I would like to grow my savings.\n\n###\n\n",
         "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, MyWay."
     },
     {
-        //>55
         "prompt": "I would like an all purpose account.\n\n###\n\n",
         "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Current Account, XtraSaver."
     },
-
-    //categorisation two - purpose of account - variation two
     {
-        //18-55
         "prompt": "I would like to save for my financial goal.\n\n###\n\n",
         "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, e$aver."
     },
     {
-        //18-55
         "prompt": "I would like an account for daily use.\n\n###\n\n",
         "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Current Account, XtraSaver."
     },
     {
-        //>55
         "prompt": "I would like to save for my retirement.\n\n###\n\n",
         "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, MyWay."
     },
     {
-        //>55
         "prompt": "I would like an account for daily use.\n\n###\n\n",
         "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Current Account, XtraSaver."
     },
-
-    //categorisation two - purpose of account - variation three
     {
-        //18-55
         "prompt": "I want an account for me to save.\n\n###\n\n",
         "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, e$aver."
     },
     {
-        //18-55
         "prompt": "I want a good spending account.\n\n###\n\n",
         "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Current Account, XtraSaver."
     },
     {
-        //>55
         "prompt": "I want an account for me to save.\n\n###\n\n",
         "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, MyWay."
     },
     {
-        //>55
         "prompt": "I want a good spending account.\n\n###\n\n",
         "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Current Account, XtraSaver."
     },
-    //assistance three - account details
     {
         "prompt": "What does XtraSaver offer?",
         "completion": "XtraSaver is an interest bearing current account that allows you to earn Cashback on your debit card purchases. Earn up to 15% CashBack on petrol on top of prevailing station discounts and receive up to 3% CashBack on your MasterCard transactions, anywhere in the world."
@@ -256,5 +218,3 @@
         "completion": "MyWay offers a lifestyle programme for 55 years and above to enjoy a world of exclusive dining, travel and healthcare privileges. You may enjoy interest rates of up to 0.30%p.a.^ with the MyWay Savings Account, access to income generating wealth solutions and enjoy privileges at selected merchants on travel and health."
     }
 ]
-
-//54 prompts
