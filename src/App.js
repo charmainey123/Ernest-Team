@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Modal from 'react-modal';
 import MainLayout from './components/MainLayout'
 import WelcomeScreen from './components/modals/WelcomeScreen';
 import AccSelectionScreen from './components/modals/AccSelectionScreen.js';
+import CreateAvatarResponse from './components/api-calls-avatar/CreateAvatarResponse';
 
 
 function App() {
@@ -33,6 +33,8 @@ function App() {
           <AccSelectionScreen closeModal={closeModal}/>
       )}
       <MainLayout/>
+      <CreateAvatarResponse/>
+      Hello
     </div>
   );
 }
