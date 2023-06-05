@@ -3,7 +3,9 @@ import MainLayout from './components/MainLayout'
 import WelcomeScreen from './components/modals/WelcomeScreen';
 import AccSelectionScreen from './components/modals/AccSelectionScreen.js';
 import CreateAvatarResponse from './components/api-calls-avatar/CreateAvatarResponse';
-
+// import Home from "./pages/HomePage";
+// import Form from "./pages/FormPage";
+import AvatarWelcomeModal from './components/modals/AvatarWelcomeModal'
 
 function App() {
   const [activePage, setActivePage] = useState(null);
@@ -21,20 +23,23 @@ function App() {
   }, [activePage]);
 
   return (
-    <div>
-      <button onClick={() => openModal('welcome')}>Open Welcome Screen</button>
+    <div className='main'>
+      {/* <Home /> */}
+      <AvatarWelcomeModal />
+
+      {/* commented out the original */}
+      {/* <button onClick={() => openModal('welcome')}>Open Welcome Screen</button>
       <button onClick={() => openModal('accSelection')}>Open AccSelection Screen</button>
-      {/* Below sets rule for what is rendered by specifying the activePage */}
+      Below sets rule for what is rendered by specifying the activePage
       {activePage === 'welcome' && (
-      //  Below passes closeModal funcyion as a prop so that the WelcomeScreen component can use it.
-          <WelcomeScreen closeModal={closeModal}/>
+        //  Below passes closeModal funcyion as a prop so that the WelcomeScreen component can use it.
+        <WelcomeScreen closeModal={closeModal} />
       )}
       {activePage === 'accSelection' && (
-          <AccSelectionScreen closeModal={closeModal}/>
+        <AccSelectionScreen closeModal={closeModal} />
       )}
-      <MainLayout/>
-      <CreateAvatarResponse/>
-      Hello
+      <MainLayout />
+      <CreateAvatarResponse /> */}
     </div>
   );
 }
