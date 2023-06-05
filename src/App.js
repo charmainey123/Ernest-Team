@@ -3,6 +3,7 @@ import MainLayout from './components/MainLayout'
 import WelcomeScreen from './components/modals/WelcomeScreen';
 import AccSelectionScreen from './components/modals/AccSelectionScreen.js';
 import CreateAvatarResponse from './components/api-calls-avatar/CreateAvatarResponse';
+import CreateInput from './components/api-calls-avatar/CreateInput';
 
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
       )}
       <MainLayout/>
       <CreateAvatarResponse/>
-      Hello
+      <CreateInput/>
     </div>
   );
 }
