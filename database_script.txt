@@ -23,7 +23,8 @@ CREATE TABLE IF NOT EXISTS public.account_form
     account_currency_code character varying(10) NOT NULL,
     id_number character varying(50) NOT NULL,
     country_of_tax_residence character varying(30) NOT NULL,
-    tax_identification_number character varying(50) NOT NULL
+    tax_identification_number character varying(50) NOT NULL,
+    purpose_of_account character varying(50) NOT NULL
 );
 
 -- Set the table ownership to the "postgres" user
