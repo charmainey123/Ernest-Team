@@ -1,0 +1,122 @@
+[
+    {
+        "prompt": "I am under 18 years old. What do you have to recommend to me?",
+        "completion": "No product"
+    },
+    {
+        "prompt": "I am above 30 years old. My goal is to save up for my upcoming wedding.",
+        "completion": "e$aver"
+    },
+    {
+        "prompt": "I am above 30 years old. My goal is to save up for rainy days.",
+        "completion": "e$aver"
+    },
+    {
+        "prompt": "I am above 30 years old. I have some funds that I will not be using for some time. I am looking for high interest rates.",
+        "completion": "e$aver"
+    },
+    {
+        "prompt": "I am above 30 years old. I will be spending a lot of money for my upcoming wedding. Do you have a credit card to recommend to me that can provide me with the highest cashback on these purchases?",
+        "completion": "XtraSaver"
+    },
+    {
+        "prompt": "I am above 18 years old. I will be spending a lot of money for my university tuition fees. What do you have to recommend to me?",
+        "competion": "XtraSaver"
+    },
+    {
+        "prompt": "I am a 41 year old auntie with two children. I usually spend a lot of money on my groceries, utilities and bills.",
+        "completion": "XtraSaver"
+    },
+    {
+        "prompt": "I am a 21 year old fresh graduate. My goal is to own a BMW by the time I reach 30 years old.",
+        "completion": "e$aver"
+    },
+    {
+        "prompt": "I am reaching 40 soon. I see my friends owning many properties and they are renting out to earn a passive income. I want to become like them. I want to retire in 10 years time, before I reach 50 years old.",
+        "completion": "MyWay"
+    },
+    {
+        "prompt": "I am expecting my first child soon, am expecting quite a lot of expenses for my child's education and necessities. We will also be moving into a new house soon to accomodate for our new addition to the family.",
+        "completion": "XtraSaver"
+    },
+    {
+        "prompt": "I am 17 years old this year. My parents is moving house soon, so we are expecting huge expenses for the next few months. What products do you have for me?",
+        "completion": "No product"
+    },
+    {
+        "prompt": "I am 17 years old this year. My parents is moving house soon, so we are expecting huge expenses for the next few months. What products do you have for my parents?",
+        "completion": "XtraSaver"
+    },
+    {
+        "prompt": "I am worried about my parents retirement. Their current savings account with another bank is yielding very low interest rates. I am afraid they are not saving enough for their retirement. What do you have to recommend to them?",
+        "completion": "MyWay"
+    },
+    {
+        "prompt": "I am worried about my retirement. With the current inflation, it is scaring me. Do you have any retirement accounts that earn high interests?",
+        "completion": "MyWay"
+    },
+    {
+        "prompt": "I am looking for a bank account for my daughter. She is reaching 18 years old in just two years time. I am expecting she will be spending quite a lot on her polytechnic tuition. She needs to get a few things for her CCA. I heard from her friends.",
+        "completion": "XtraSaver"
+    },
+    {
+        "prompt": "I am looking for something for my wife. She is a retiree and does not have much savings since she works part-time as a cleaner previously. I am worried for her. Do you have anything to recommend?",
+        "completion": "MyWay"
+    },
+    {
+        "prompt": "I am looking for something for my husband. He just retired. He has quite a bit of savings haha so retirement is not a concern. But I am still worried since he does not save much, spend and spend only!",
+        "completion": "XtraSaver"
+    },
+    {
+        "prompt": "I am looking for something for my child. He is 8 years old now. Do you have something for him to save until 21 years old when he will enter tertiary education? What product do you have to recommend to me?",
+        "completion": "No product"
+    },
+    {
+        "prompt": "I am 60 years old. I do not intend to retire soon. I do not have much things to spend on actually. What product do you recommend to me?",
+        "completion": "MyWay"
+    },
+    {
+        "prompt": "I am 24 years old. I aim to retire by the age of 35 years old haha though I am not sure whether that is possible?! Sounds crazy huh? Yeah, my mom says that of me sometimes. I am still spending a lot, sometimes I travel, sometimes I just buy things because they are so cute! Help me!",
+        "completion": "XtraSaver"
+    },
+    {
+        "prompt": "I am spending quite a lot lately. My friends are all telling me that I might as well apply for a credit card here. But I am not sure which one is it. Do you know which one my friend is referring to?",
+        "completion": "XtraSaver"
+    },
+    {
+        "prompt": "Given the current inflation, I am not spending much. My goal is to just save as much as possible for now. The inflation and pandemic has taught me the importance of savings! Do you have something for me?",
+        "completion": "e$aver"
+    },
+    {
+        "prompt": "Do you think it's possible to save 1 million dollars by the time I reach 30 years old? Yes, I am looking for such a bank account.",
+        "completion": "e$aver"
+    },
+    {
+        "prompt": "My mum asked me to open a bank account for her since she spends so much on groceries, she might as well open an account that gives her a credit card with maximum savings.",
+        "completion": "e$aver"
+    },
+    {
+        "prompt": "My hobbies include travelling. So far, I have explored 12 countries, even though I am only 17 years old. Can you recommend something for me based on my hobby?",
+        "completion": "No product"
+    },
+    {
+        "prompt": "I really love travelling! But I will probably take a break for now since I am intending to save up for a career change. Need some spare cash since job economy is so bad now. What do you have for me?",
+        "completion": "e$aver"
+    },
+    {
+        "prompt": "Travelling is my number one thing! So I think I spend a lot LOL. Do you have something for someone who spends so frivolously and not prudently? Omg I am feeling embarassed from even saying this. I probably need to change.",
+        "completion": "XtraSaver"
+    },
+    {
+        "prompt": "I recently got scammed! I am so furious. I need a fast way to build up the remaining savings I have. Why would the scammers do something to a 60 year old like me? Please help me recommend a bank account so I can retire in peace soon. I do not want to work till I drop dead.",
+        "completion": "MyWay"
+    },
+    {
+        "prompt": "My wife and I are both no longer working since we are old now. We want to open a bank account so we can save up enough. Do you have anything to recommend for us so that we have enough savings and not have to rely on our children for support?",
+        "completion": "MyWay"
+    },
+    {
+        "prompt": "I am a single widow, reaching 55 years old soon. I do have some CPF withdrawals coming soon. I am not sure what to do with this money since I do not spend much. Do you have anything to recommend to me to save up these CPF money? Preferably something to grow these savings further.",
+        "completion": "MyWay"
+    }
+]
