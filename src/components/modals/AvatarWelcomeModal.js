@@ -1,42 +1,39 @@
-import { useState } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 import "../../styles/avatarwelcomemodal.css";
 import video from '../../videos/welcome-talk.mp4';
 
-export default function Modal() {
-    // true because we want to see the modal when the main page loads
-    const [modal, setModal] = useState(true);
+export default function AvatarWelcomeModal() {
 
-    const toggleModal = () => {
-        setModal(!modal);
+    const [avatarModalIsOpen, setAvatarModalIsOpen] = useState(true);
+    const [avatarVideoFinished, setAvatarVideoFinished] = useState(false);
+    const videoRef = useRef(null);
+
+    const handleAvatarVideoEnd = () => {
+        setAvatarVideoFinished(true);
     };
 
-    // if (modal) {
-    //     document.body.classList.add('active-modal')
-    // } else {
-    //     document.body.classList.remove('active-modal')
-    // }
+    useEffect(() => {
+        if (avatarVideoFinished) {
+            const timer = setTimeout(() => {
+                // Close the modal here
+                setAvatarModalIsOpen(false);
+            }, 4000);
+
+            return () => clearTimeout(timer);
+        }
+    }, [avatarVideoFinished]);
 
     return (
         <div>
-            {/* <button onClick={toggleModal} className="btn-modal">
-                Open
-            </button> */}
-
-            {modal && (
-                <div className="modal">
-                    <div onClick={toggleModal} className="overlay"></div>
+            {avatarModalIsOpen && (
+                <div className="overlay">
                     <div className="modal-content">
-                        {/* apparently autoplay with sound is not allowed as per the policy so i can only do autoplay without sound */}
-                        <video autoPlay controls muted>
-                            <source src={video} alt="Avatar" className="left-avatar" type="video/mp4" />
+                        <video controls autoPlay ref={videoRef} onEnded={handleAvatarVideoEnd}>
+                            <source src={video} alt="Avatar Welcome Video" />
                         </video>
-                        <button className="close-modal" onClick={toggleModal}>
-                            CLOSE
-                        </button>
                     </div>
                 </div>
             )}
-            <p>Text</p>
         </div>
     )
 };
