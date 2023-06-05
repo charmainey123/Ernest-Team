@@ -1,2 +1,7 @@
+-------------Model 1-----------------
 ft-9GJtZOBnxUijLV0uWDgU211D
 curie:ft-personal-2023-06-04-10-13-42
+
+-------------Model 2-----------------
+ft-OQyFSNe81vGixjWMocigmlCn
+curie:ft-personal-2023-06-05-05-52-26
