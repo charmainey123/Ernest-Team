@@ -7,7 +7,6 @@
         "prompt": "What type of accounts does Standard Chartered Bank have?\n\n###\n\n",
         "completion": "We have two types of accounts, mainly Current Accounts and Savings Accounts. Current Accounts are recommended for everyday use, while Savings Account are recommended for general saving. Which type of account are you looking for?"
     },
-    
     {
         "prompt": "What are the accounts that the Bank have?\n\n###\n\n",
         "completion": "We have a wide range of products to cater to our clients' needs, what type of account are you looking for?"
@@ -16,7 +15,6 @@
         "prompt": "What type of accounts does the Bank have?\n\n###\n\n",
         "completion": "We have two types of accounts, mainly Current Accounts and Savings Accounts. Current Accounts are recommended for everyday use, while Savings Account are recommended for general saving. Which type of account are you looking for?"
     },
-
     {
         "prompt": "What accounts are there?\n\n###\n\n",
         "completion": "We have a wide range of products to cater to our clients' needs, what type of account are you looking for?"
@@ -47,7 +45,7 @@
     },
     {
         "prompt": "I am more interested in gaining interest by depositing fresh funds.\n\n###\n\n",
-        "completion": "If that is the case, I would recommend you to open a Savings Account."
+        "completion": "I would recommend you to open a Savings Account."
     },
     {
         "prompt": "I am not sure which type of account suit me.\n\n###\n\n",
@@ -55,7 +53,7 @@
     },
     {
         "prompt": "I am looking to use my account for daily transactions.\n\n###\n\n",
-        "completion": "If that is the case, I would recommend you to open a Current Account."
+        "completion": "After hearing your needs, I would recommend you to open a Current Account."
     },
     {
         "prompt": "I am looking to use my account to stash my cash.\n\n###\n\n",
@@ -159,7 +157,7 @@
     },
     {
         "prompt": "I would like to grow my savings.\n\n###\n\n",
-        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, e$aver."
+        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, E-saver."
     },
     {
         "prompt": "I would like an all purpose account.\n\n###\n\n",
@@ -175,7 +173,7 @@
     },
     {
         "prompt": "I would like to save for my financial goal.\n\n###\n\n",
-        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, e$aver."
+        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, E-saver."
     },
     {
         "prompt": "I would like an account for daily use.\n\n###\n\n",
@@ -191,7 +189,7 @@
     },
     {
         "prompt": "I want an account for me to save.\n\n###\n\n",
-        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, e$aver."
+        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, E-saver."
     },
     {
         "prompt": "I want a good spending account.\n\n###\n\n",
@@ -204,17 +202,5 @@
     {
         "prompt": "I want a good spending account.\n\n###\n\n",
         "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Current Account, XtraSaver."
-    },
-    {
-        "prompt": "What does XtraSaver offer?",
-        "completion": "XtraSaver is an interest bearing current account that allows you to earn Cashback on your debit card purchases. Earn up to 15% CashBack on petrol on top of prevailing station discounts and receive up to 3% CashBack on your MasterCard transactions, anywhere in the world."
-    },
-    {
-        "prompt": "What does e$aver offer?",
-        "completion": "With e$aver, you can earn up to 3.40% p.a. interest on eligible deposit balance up to S$2 million with no lock-in period - ejoy the flexibility to access your funds at any time."
-    },
-    {
-        "prompt": "What does MyWay offer?",
-        "completion": "MyWay offers a lifestyle programme for 55 years and above to enjoy a world of exclusive dining, travel and healthcare privileges. You may enjoy interest rates of up to 0.30%p.a.^ with the MyWay Savings Account, access to income generating wealth solutions and enjoy privileges at selected merchants on travel and health."
     }
 ]

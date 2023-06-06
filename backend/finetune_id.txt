@@ -5,3 +5,7 @@ curie:ft-personal-2023-06-04-10-13-42
 -------------Model 2-----------------
 ft-OQyFSNe81vGixjWMocigmlCn
 curie:ft-personal-2023-06-05-05-52-26
+
+-------------Model 3----------------
+ft-TArOKq5lH09NNkEmMaAhTj0u
+curie:ft-personal-2023-06-06-08-45-36
