@@ -27,7 +27,16 @@ CREATE TABLE IF NOT EXISTS public.application
     purpose_of_account character varying(50) NOT NULL
 );
 
+-- Create the "conversations" table
+CREATE TABLE IF NOT EXISTS public.conversations
+(
+    conversation_id int NOT NULL,
+    role_id character varying(30),
+    response character varying(500)
+);
+
 -- Set the table ownership to the "postgres" user
 
 ALTER TABLE public.customers OWNER to postgres;
 ALTER TABLE public.application OWNER to postgres;
+ALTER TABLE public.conversations OWNER to postgres;
