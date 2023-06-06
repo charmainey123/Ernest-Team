@@ -30,6 +30,7 @@ CREATE TABLE IF NOT EXISTS public.application
 -- Create the "conversations" table
 CREATE TABLE IF NOT EXISTS public.conversations
 (
+    row_id bigint NOT NULL PRIMARY KEY,
     conversation_id bigint NOT NULL,
     role_id character varying(30),
     response character varying(500)
