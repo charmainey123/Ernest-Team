@@ -124,3 +124,6 @@ while True:
     except sr.UnknownValueError:
         print("No audio detected. Continue detecting in background...")
         continue
+
+# Delete the audio file
+os.remove("./output.mp3")
