@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 
 const FormApp = () => {
@@ -21,7 +22,6 @@ const FormApp = () => {
     taxId: '',
     purpose: ''
   });
-
 
   const options = [
     { value: 'Savings', label: 'Savings' },
@@ -47,9 +47,15 @@ const FormApp = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
+    try {
+      const response = await axios.post('/insert_data', { name, email, mobile, currency, id, country, taxId, purpose });
+      console.log(response.data.message)
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const handleOptionChange = (event) => {
