@@ -1,0 +1,42 @@
+-- Drop existing tables if they exist
+DROP TABLE IF EXISTS public.customers;
+DROP TABLE IF EXISTS public.application;
+
+-- Create the "customers" table
+CREATE TABLE IF NOT EXISTS public.customers
+(
+    client_id character(30) NOT NULL,
+    full_name character varying(50),
+    email_address character varying(50),
+    mobile_number character(10),
+    id_number character varying(50),
+    country_of_tax_registration character varying(50),
+    tax_identification_number character varying(50)
+);
+
+-- Create the "application" table
+CREATE TABLE IF NOT EXISTS public.application
+(
+    full_name character varying(50) NOT NULL,
+    email_address character varying(50) NOT NULL,
+    mobile_number character(10) NOT NULL,
+    account_currency_code character varying(10) NOT NULL,
+    id_number character varying(50) NOT NULL,
+    country_of_tax_residence character varying(30) NOT NULL,
+    tax_identification_number character varying(50) NOT NULL,
+    purpose_of_account character varying(50) NOT NULL
+);
+
+-- Create the "conversations" table
+CREATE TABLE IF NOT EXISTS public.conversations
+(
+    conversation_id int NOT NULL,
+    role_id character varying(30),
+    response character varying(500)
+);
+
+-- Set the table ownership to the "postgres" user
+
+ALTER TABLE public.customers OWNER to postgres;
+ALTER TABLE public.application OWNER to postgres;
+ALTER TABLE public.conversations OWNER to postgres;
