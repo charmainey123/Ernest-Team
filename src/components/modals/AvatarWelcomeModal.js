@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import "../../styles/avatarwelcomemodal.css";
 import video from '../../videos/welcome-talk.mp4';
+// import { useNavigate } from 'react-router-dom';
+// import { createBrowserHistory } from 'history';
 
-export default function AvatarWelcomeModal() {
+function AvatarWelcomeModal({ setRedirectActive }) {
 
     const [avatarModalIsOpen, setAvatarModalIsOpen] = useState(true);
     const [avatarVideoFinished, setAvatarVideoFinished] = useState(false);
@@ -17,11 +19,12 @@ export default function AvatarWelcomeModal() {
             const timer = setTimeout(() => {
                 // Close the modal here
                 setAvatarModalIsOpen(false);
-            }, 4000);
+                setRedirectActive(2);
+            }, 3000);
 
             return () => clearTimeout(timer);
         }
-    }, [avatarVideoFinished]);
+    }, [avatarVideoFinished, setRedirectActive]);
 
     return (
         <div>
@@ -37,3 +40,5 @@ export default function AvatarWelcomeModal() {
         </div>
     )
 };
+
+export default AvatarWelcomeModal;
