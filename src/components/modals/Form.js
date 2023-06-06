@@ -145,7 +145,7 @@ const FormApp = () => {
 
     <div style={{ display: 'flex', justifyContent: 'right',marginTop: '20px' }}>
         <label htmlFor="purpose">Purpose Of Account :</label>
-        <select id="purpose" value={purpose} onChange={handleOptionChange} required style={{marginLeft: '10px',width: '300px', height: '20px'}}>
+        <select id="purpose" value={purpose} onChange={handleOptionChange} required style={{marginLeft: '10px',width: '310px', height: '25px'}}>
           <option value="Savings">Savings</option>
           <option value="Payroll">Payroll</option>
           <option value="General/Personal Transactions">General/Personal Transactions</option>
