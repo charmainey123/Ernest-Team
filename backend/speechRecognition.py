@@ -5,6 +5,8 @@ import soundfile as sf
 import openai
 import os
 import sys
+import psycopg2
+from datetime import datetime
 
 # Initializing all variables
 # Reading API Key
@@ -25,6 +27,9 @@ messages = [
     {"role": "user", "content": "What are the types of accounts you have?\n\n===\n\n"},
     {"role": "assistant", "content": " We currently have two types of savings accounts, one called MyWay and the other called E-saver. The former is more for those above 55 years old with retirement planning in mind. The latter gives high interest on fresh funds. For current account, we have XtraSaver, an interest bearing account with cashback on card purchases.\n"}
 ]
+
+# Get today's date
+conversation_id = int(datetime.now().strftime("%Y%m%d%H%M%S"))
 
 # Define functions
 def speak(text):
@@ -54,7 +59,28 @@ def generate_response(transcript):
     messages.append({"role": "assistant", "content": response})
     return response
 
+def post_to_database(conversation_id, role_id, response):
+    try:
+        connection = psycopg2.connect(user='postgres', 
+                                      password='root',
+                                      host='localhost',
+                                      port=5432,
+                                      database='scverse')
+
+        cursor = connection.cursor()
+        query = "insert into conversations (conversation_id, role_id, response) values ({}, '{}', '{}')".format(conversation_id, role_id, response)
+        cursor.execute(query)
+        connection.commit()
+        cursor.close()
+        connection.close()
+    except:
+        print("Error posting results to database. Please check your connection.")
+
 # Audio-Response Generation
+"""
+This part of the code is triggered when the user clicks on the button "speak to Ernest"
+"""
+
 """
 This part of the code is triggered when the user clicks on the button "speak to Ernest"
 """
@@ -72,8 +98,10 @@ def trigger_response():
                 f.write(audio.get_wav_data(convert_rate=44100, convert_width=2))
             audio_file = open(output_audio_file, "rb")
             transcript = openai.Audio.transcribe("whisper-1", audio_file)["text"]
+            post_to_database(conversation_id, 'user', transcript)
             print("You:\n", transcript,"\n")
             response = generate_response(transcript)
+            post_to_database(conversation_id, 'assistant', response)
             print("Ernest:\n", response, "\n")
 
             # Line 24 will be replaced by D-ID once it is ready
