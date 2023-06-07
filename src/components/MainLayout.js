@@ -12,6 +12,7 @@ return (
           <source src={video} alt="Avatar" className="left-avatar" />
           </video>
      </div>
+     
 )
 
 }

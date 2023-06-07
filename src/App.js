@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import AvatarWelcomeModal from './components/modals/AvatarWelcomeModal';
 import Form from './components/modals/Form';
 
@@ -33,6 +34,7 @@ function App() {
       {activePage === 'accSelection' && (
         <AccSelectionScreen closeModal={closeModal} />
       )}
+
       <MainLayout />
       <CreateAvatarResponse />
       <CreateInput /> */}
@@ -41,3 +43,4 @@ function App() {
 }
 
 export default App;
+ 

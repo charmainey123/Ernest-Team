@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 
 //makeAPICall1 is a POST method to generate the video, using text input from chatgpt and an image from online storage.
@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react';
 
 function CreateAvatarResponse({ input }) {
   const [responseId, setResponseId] = useState(null);
+  const [resultUrl, setResultUrl] = useState(null);
 
   const makeAPICall1 = () => {
     // Check if input is null or empty before making the API call
@@ -19,7 +20,7 @@ function CreateAvatarResponse({ input }) {
       headers: {
         accept: 'application/json',
         'content-type': 'application/json',
-        authorization: 'Basic WkhKaFoyOXVjMjUxYm1sQVoyMWhhV3d1WTI5dDprNW9nSkxCQXJZRVBZNl9vbE5GV0I='
+        authorization: 'Basic WTJodmIyVnlibVZ6ZERnMVFHZHRZV2xzTG1OdmJROkM0VkV1clUtbkFTSDl1M3dJMGpZdQ=='
       },
       body: JSON.stringify({
         script: {
@@ -30,7 +31,7 @@ function CreateAvatarResponse({ input }) {
           input: input
         },
         config: { fluent: 'false', pad_audio: '0.0' },
-        source_url: 's3://d-id-images-prod/google-oauth2|104007482304986843759/img_TIv05EVgQcEDWvb-NVP9d/passport_ernest.jpeg' //this image might expire. Image upload can be done on the D-ID website.
+        source_url: 's3://d-id-images-prod/google-oauth2|111101595976295069161/img_-a_DPaJlBG4nSURJohTne/passport_ernest.jpeg' //this image might expire. Image upload can be done on the D-ID website.
       })
     };
 
@@ -45,7 +46,7 @@ function CreateAvatarResponse({ input }) {
   };
 
   const makeAPICall2 = () => {
-    if (!responseId) { //If responseId is not null, responseId is plugged into the URL of the API call.
+    if (!responseId || responseId === null  ) { //If responseId is not null, responseId is plugged into the URL of the API call.
       console.log('Response ID is null');
       return;
     }
@@ -54,14 +55,20 @@ function CreateAvatarResponse({ input }) {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        authorization: 'Basic WlhKdVpYTjBZMmg1UUdkdFlXbHNMbU52YlE6M1Zyb2xhZVh0cE9YZmpXQl91OUNp'
+        authorization: 'Basic WTJodmIyVnlibVZ6ZERnMVFHZHRZV2xzTG1OdmJROkM0VkV1clUtbkFTSDl1M3dJMGpZdQ=='
       }
     };
 
+    setTimeout(() => {
     fetch(`https://api.d-id.com/talks/${responseId}`, options)
       .then(response => response.json())
-      .then(response => console.log(response))
+      .then(response => {
+        const url = response.result_url;
+        setResultUrl(url); // Update the resultUrl state variable
+        console.log('resultURL:', url);
+      })
       .catch(err => console.error(err));
+    }, 10000); //Wait for 10 seconds before making the call
   };
 
   useEffect(() => {  //runs when the input prop changes
@@ -72,7 +79,33 @@ function CreateAvatarResponse({ input }) {
     makeAPICall2();
   }, [responseId]);
 
-  return null; // we can return the avatar in JSX for this
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (videoRef.current) {
+        videoRef.current.play();
+      }
+      
+    }, 100); // Delay autoplay (in ms)
+
+    return () => clearTimeout(timeout);
+  }, []);
+ 
+  return ( // we can return the avatar in JSX for this
+
+  <div>
+  <h1>Video Example</h1>
+  {resultUrl ? (
+    <video ref={videoRef}>
+      <source src={resultUrl} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  ) : (
+    <p>Loading video...</p>
+  )}
+</div>
+  );
 }
 
 export default CreateAvatarResponse;
