@@ -53,16 +53,16 @@ const FormApp = () => {
     event.preventDefault();
     console.log(formData);
     try{
-      // const data = {
-      //   name: 'John',
-      //   email: 'john@gmail.com',
-      //   mobile: '123',
-      //   currency: 'SGD',
-      //   id: '123',
-      //   country: 'SG',
-      //   taxId: '123',
-      //   purpose: 'savings'
-      // }
+      const data = {
+        name: 'John',
+        email: 'john@gmail.com',
+        mobile: '123',
+        currency: 'SGD',
+        id: '123',
+        country: 'SG',
+        taxId: '123',
+        purpose: 'savings'
+      }
       const response = await axios.post('http://localhost:5000/insert_data', data);
       console.log(response.data.message)
     } catch (error) {
