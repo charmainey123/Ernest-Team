@@ -4,6 +4,7 @@ import WelcomeScreen from './components/modals/WelcomeScreen';
 import AccSelectionScreen from './components/modals/AccSelectionScreen.js';
 import CreateAvatarResponse from './components/api-calls-avatar/CreateAvatarResponse';
 import CreateInput from './components/api-calls-avatar/CreateInput';
+import { experimentalStyled } from '@mui/material';
 
 
 function App() {
@@ -34,10 +35,10 @@ function App() {
           <AccSelectionScreen closeModal={closeModal}/>
       )}
       <MainLayout/>
-      <CreateAvatarResponse/>
       <CreateInput/>
     </div>
   );
 }
 
 export default App;
+ 
