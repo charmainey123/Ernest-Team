@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import AvatarWelcomeModal from './components/modals/AvatarWelcomeModal';
-import Form from './components/modals/Form'
 
 // ernest's part, which is not needed by char and I's ui
 // import MainLayout from './components/MainLayout'
