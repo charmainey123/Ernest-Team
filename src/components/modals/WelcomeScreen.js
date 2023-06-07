@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/modals.css'; // Import the CSS file
 
-const WelcomeScreen = ({ closeModal }) =>  {
+const WelcomeScreen = ({ closeModal }) => {
   return (
     <div className="modal">
       <div className="modal-content">
