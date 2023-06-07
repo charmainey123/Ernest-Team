@@ -4,7 +4,7 @@ import React, { useEffect, useState, useRef } from 'react';
 //makeAPICall1 is a POST method to generate the video, using text input from chatgpt and an image from online storage.
 //makeAPICall2 is a GET method to retrieve the video.
 
-function CreateAvatarResponse({ input }) {
+function CreateAvatarResponse({ input, setRedirectActive }) {
   const [responseId, setResponseId] = useState(null);
   const [resultUrl, setResultUrl] = useState(null);
 
@@ -79,6 +79,8 @@ function CreateAvatarResponse({ input }) {
     makeAPICall2();
   }, [responseId]);
 
+
+  //-------------------------------------Video-related-----------------------------------------------
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -86,18 +88,40 @@ function CreateAvatarResponse({ input }) {
       if (videoRef.current) {
         videoRef.current.play();
       }
-      
     }, 100); // Delay autoplay (in ms)
 
     return () => clearTimeout(timeout);
   }, []);
  
+
+  const [avatarResponseIsOpen, setAvatarResponseIsOpen] = useState(true);
+  const [avatarResponseFinished, setAvatarResponseFinished] = useState(false);
+  
+
+  const handleAvatarVideoEnd = () => {
+    setAvatarResponseFinished(true);
+  };
+
+  useEffect(() => {
+      if (avatarResponseFinished) {
+          const timer = setTimeout(() => {
+              // Close the modal here
+              setAvatarResponseIsOpen(false);
+              setRedirectActive(2);
+          }, 2000);
+
+          return () => clearTimeout(timer);
+      }
+  }, [avatarResponseFinished, setRedirectActive]);
+
+
+
   return ( // we can return the avatar in JSX for this
 
   <div>
   <h1>Video Example</h1>
   {resultUrl ? (
-    <video ref={videoRef}>
+   <video controls autoPlay ref={videoRef} onEnded={handleAvatarVideoEnd}>
       <source src={resultUrl} type="video/mp4" />
       Your browser does not support the video tag.
     </video>

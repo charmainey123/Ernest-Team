@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import CreateInput from '../api-calls-avatar/CreateInput';
 import axios from 'axios';
 
 
@@ -179,7 +180,9 @@ const FormApp = () => {
           <button type="submit" style={buttonStyle}>Submit</button>
         </div>
       </form>
+      <CreateInput />
     </div>
+    
   );
 }
 
