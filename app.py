@@ -1,9 +1,11 @@
 from flask import Flask, request
+from flask_cors import CORS
 import psycopg2
 
 app = Flask(__name__)
+CORS(app)
 
-# Replace with your PostgreSQL connection details
+# Define connection parameters
 connection_params = {
     'host': 'localhost',
     'database': 'scverse',
@@ -11,6 +13,11 @@ connection_params = {
     'password': 'root',
     'port': 5432,
 }
+
+# Define routes and logic below
+@app.route('/')
+def home():
+    return 'Hello, World!'
 
 @app.route('/insert_data', methods=['POST'])
 def insert_data():
@@ -43,6 +50,8 @@ def insert_data():
             cursor.close()
         if conn:
             conn.close()
+
+# Add more routes and logic as needed
 
 if __name__ == '__main__':
     app.run()

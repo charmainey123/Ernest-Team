@@ -49,9 +49,21 @@ const FormApp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("before")
     console.log(formData);
+    console.log("after")
     try {
-      const response = await axios.post('/insert_data', { name, email, mobile, currency, id, country, taxId, purpose });
+      const data = {
+        name: 'John',
+        email: 'john@gmail.com',
+        mobile: '123',
+        currency: 'SGD',
+        id: '123',
+        country: 'SG',
+        taxId: '123',
+        purpose: 'savings'
+      }
+      const response = await axios.post('http://localhost:5000/insert_data', data);
       console.log(response.data.message)
     } catch (error) {
       console.error(error);
