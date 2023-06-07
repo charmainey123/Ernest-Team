@@ -57,13 +57,13 @@ def insert_data():
 @socketio.on('connect')
 def handle_connect():
     # Start the Python script in the background and capture the output
-    process = Popen(['python', "./speechRecognition.py"], stdout=PIPE, stderr=PIPE)
+    process = Popen(['python', "./backend/speechRecognition.py"], stdout=PIPE, stderr=PIPE)
     
     # Continuously send the output to the frontend
     while True:
-        output = process.stdout.readline().decode().strip()
-        if output:
-            socketio.emit('script_output', output)
+        ernestResponse = process.stdout.readline().decode().strip()
+        if ernestResponse:
+            socketio.emit('backend_output', ernestResponse)
 
 if __name__ == '__main__':
     socketio.run(app)
