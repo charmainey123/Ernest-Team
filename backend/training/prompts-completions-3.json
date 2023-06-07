@@ -1,0 +1,402 @@
+[
+    {
+        "prompt": "What are the list of accounts that Standard Chartered Bank provide?\n\n###\n\n",
+        "completion": "We have a wide range of products to cater to our clients' needs, what type of account are you looking for?"
+    },
+    {
+        "prompt": "What type of accounts does Standard Chartered Bank have?\n\n###\n\n",
+        "completion": "We have two types of accounts, mainly Current Accounts and Savings Accounts. Current Accounts are recommended for everyday use, while Savings Account are recommended for general saving. Which type of account are you looking for?"
+    },
+    {
+        "prompt": "What are the accounts that the Bank have?\n\n###\n\n",
+        "completion": "We have a wide range of products to cater to our clients' needs, what type of account are you looking for?"
+    },
+    {
+        "prompt": "What type of accounts does the Bank have?\n\n###\n\n",
+        "completion": "We have two types of accounts, mainly Current Accounts and Savings Accounts. Current Accounts are recommended for everyday use, while Savings Account are recommended for general saving. Which type of account are you looking for?"
+    },
+    {
+        "prompt": "What accounts are there?\n\n###\n\n",
+        "completion": "We have a wide range of products to cater to our clients' needs, what type of account are you looking for?"
+    },
+    {
+        "prompt": "What type of accounts are there?\n\n###\n\n",
+        "completion": "We have two types of accounts, mainly Current Accounts and Savings Accounts. Current Accounts are recommended for everyday use, while Savings Account are recommended for general saving. Which type of account are you looking for?"
+    },
+    {
+        "prompt": "Which type of account do you think suits me?\n\n###\n\n",
+        "completion": "No worries, I can help. Would you be using your account for daily transactions, or are you looking to stash your cash?"
+    },
+    {
+        "prompt": "I will be using my account for daily transactions.\n\n###\n\n",
+        "completion": "If that is the case, I would recommend you to open a Current Account."
+    },
+    {
+        "prompt": "I will be using my account to stash my cash.\n\n###\n\n",
+        "completion": "If that is the case, I would recommend you to open a Savings Account."
+    },
+    {
+        "prompt": "Would you recommend Current Account or Savings Account?\n\n###\n\n",
+        "completion": "It depends on your preference. Generally, Current Accounts allows you to gain more interest through spending, while Savings Accounts allows you to gain more interest by depositing fresh funds. Which are you more interested in?"
+    },
+    {
+        "prompt": "I am more interested in gaining interest through spending.\n\n###\n\n",
+        "completion": "If that is the case, I would recommend you to open a Current Account."
+    },
+    {
+        "prompt": "I am more interested in gaining interest by depositing fresh funds.\n\n###\n\n",
+        "completion": "I would recommend you to open a Savings Account."
+    },
+    {
+        "prompt": "I am not sure which type of account suit me.\n\n###\n\n",
+        "completion": "No worries, I can help. Would you be using your account for daily transactions, or are you looking to stash your cash?"
+    },
+    {
+        "prompt": "I am looking to use my account for daily transactions.\n\n###\n\n",
+        "completion": "After hearing your needs, I would recommend you to open a Current Account."
+    },
+    {
+        "prompt": "I am looking to use my account to stash my cash.\n\n###\n\n",
+        "completion": "If that is the case, I would recommend you to open a Savings Account."
+    },
+    {
+        "prompt": "Which is better, Current Account or Savings Account?\n\n###\n\n",
+        "completion": "It depends on your preference. Generally, Current Accounts allows you to gain more interest through spending, while Savings Accounts allows you to gain more interest by depositing fresh funds. Which are you more interested in?"
+    },
+    {
+        "prompt": "I prefer gaining interest through spending.\n\n###\n\n",
+        "completion": "If that is the case, I would recommend you to open a Current Account."
+    },
+    {
+        "prompt": "I prefer gaining interest by depositing fresh funds.\n\n###\n\n",
+        "completion": "If that is the case, I would recommend you to open a Savings Account."
+    },
+    {
+        "prompt": "I am not sure which type of account to choose.\n\n###\n\n",
+        "completion": "No worries, I can help. Would you be using your account for daily transactions, or are you looking to stash your cash?"
+    },
+    {
+        "prompt": "I will use it for daily transactions.\n\n###\n\n",
+        "completion": "If that is the case, I would recommend you to open a Current Account."
+    },
+    {
+        "prompt": "I will use it to stash my cash.\n\n###\n\n",
+        "completion": "If that is the case, I would recommend you to open a Savings Account."
+    },
+    {
+        "prompt": "Is Current Account or Savings Account better?\n\n###\n\n",
+        "completion": "It depends on your preference. Generally, Current Accounts allows you to gain more interest through spending, while Savings Accounts allows you to gain more interest by depositing fresh funds. Which are you more interested in?"
+    },
+    {
+        "prompt": "Gaining interest through spending suits me more.\n\n###\n\n",
+        "completion": "If that is the case, I would recommend you to open a Current Account."
+    },
+    {
+        "prompt": "Gaining interest by depositing fresh funds suits me more.\n\n###\n\n",
+        "completion": "If that is the case, I would recommend you to open a Savings Account."
+    },
+    {
+        "prompt": "I am looking for a Current Account.\n\n###\n\n",
+        "completion": "No problem, which Current Account would you like to apply for?"
+    },
+    {
+        "prompt": "Which Current Account do you recommend?\n\n###\n\n",
+        "completion": "Before I recommend, I would like to understand more about you. Firstly, which age range do you fall under? Under 18, between 18 and 55, or above 55?"
+    },
+    {
+        "prompt": "I am looking for a Savings Account.\n\n###\n\n",
+        "completion": "No problem, which Savings Account would you like to apply for?"
+    },
+    {
+        "prompt": "Which Savings Account do you recommend?\n\n###\n\n",
+        "completion": "Before I recommend, I would like to understand more about you. Firstly, which age range do you fall under? Under 18, between 18 and 55, or above 55?"
+    },
+    {
+        "prompt": "I want to apply for a Current Account.\n\n###\n\n",
+        "completion": "No problem, which Current Account would you like to apply for?"
+    },
+    {
+        "prompt": "Can you recommend a Current Account?\n\n###\n\n",
+        "completion": "Before I recommend, I would like to understand more about you. Firstly, which age range do you fall under? Under 18, between 18 and 55, or above 55?"
+    },
+    {
+        "prompt": "I want to apply for a Savings Account.\n\n###\n\n",
+        "completion": "No problem, which Savings Account would you like to apply for?"
+    },
+    {
+        "prompt": "Can you recommend a Savings Account?\n\n###\n\n",
+        "completion": "Before I recommend, I would like to understand more about you. Firstly, which age range do you fall under? Under 18, between 18 and 55, or above 55?"
+    },
+    {
+        "prompt": "Can you help me apply for a Current Account?\n\n###\n\n",
+        "completion": "No problem, which Current Account would you like to apply for?"
+    },
+    {
+        "prompt": "I am not sure which Current Account to apply for.\n\n###\n\n",
+        "completion": "No problem, I can help to recommend. Before I do so, I would like to understand more about you. Firstly, which age range do you fall under? Under 18, between 18 and 55, or above 55?"
+    },
+    {
+        "prompt": "Can you help me apply for a Savings Account.\n\n###\n\n",
+        "completion": "No problem, which Savings Account would you like to apply for?"
+    },
+    {
+        "prompt": "I am not sure which Savings Account to apply for.\n\n###\n\n",
+        "completion": "No problem, I can help to recommend. Before I do so, I would like to understand more about you. Firstly, which age range do you fall under? Under 18, between 18 and 55, or above 55?"
+    },
+    {
+        "prompt": "I am under 18.\n\n###\n\n",
+        "completion": "I am sorry, but we require applicants to our Accounts to be at least 18 of age."
+    },
+    {
+        "prompt": "I am between 18 and 55.\n\n###\n\n",
+        "completion": "Great, may I know what is the purpose of your account creation?"
+    },
+    {
+        "prompt": "I am above 55.\n\n###\n\n",
+        "completion": "Great, may I know what is the purpose of your account creation?"
+    },
+    {
+        "prompt": "I would like to grow my savings.\n\n###\n\n",
+        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, E-saver."
+    },
+    {
+        "prompt": "I would like an all purpose account.\n\n###\n\n",
+        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Current Account, XtraSaver."
+    },
+    {
+        "prompt": "I would like to grow my savings.\n\n###\n\n",
+        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, MyWay."
+    },
+    {
+        "prompt": "I would like an all purpose account.\n\n###\n\n",
+        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Current Account, XtraSaver."
+    },
+    {
+        "prompt": "I would like to save for my financial goal.\n\n###\n\n",
+        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, E-saver."
+    },
+    {
+        "prompt": "I would like an account for daily use.\n\n###\n\n",
+        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Current Account, XtraSaver."
+    },
+    {
+        "prompt": "I would like to save for my retirement.\n\n###\n\n",
+        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, MyWay."
+    },
+    {
+        "prompt": "I would like an account for daily use.\n\n###\n\n",
+        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Current Account, XtraSaver."
+    },
+    {
+        "prompt": "I want an account for me to save.\n\n###\n\n",
+        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, E-saver."
+    },
+    {
+        "prompt": "I want a good spending account.\n\n###\n\n",
+        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Current Account, XtraSaver."
+    },
+    {
+        "prompt": "I want an account for me to save.\n\n###\n\n",
+        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Savings Account, MyWay."
+    },
+    {
+        "prompt": "I want a good spending account.\n\n###\n\n",
+        "completion": "Very well, based on the information I have gathered, I would recommend you to apply for our Current Account, XtraSaver."
+    },
+    {
+        "prompt": "What does XtraSaver offer?\n\n###\n\n",
+        "completion": "XtraSaver is an interest bearing current account that allows you to earn Cashback on your debit card purchases. Earn up to 15% CashBack on petrol on top of prevailing station discounts and receive up to 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "What does E-saver offer?\n\n###\n\n",
+        "completion": "With E-saver, you can earn up to 3.40% per annum interest on eligible deposit balance up to $2 million with no lock-in period - enjoy the flexibility to access your funds at any time."
+    },
+    {
+        "prompt": "What does MyWay offer?\n\n###\n\n",
+        "completion": "MyWay offers a lifestyle programme for 55 years and above to enjoy a world of exclusive dining, travel and healthcare privileges. You may enjoy interest rates of up to 0.30%per annum with the MyWay Savings Account, access to income generating wealth solutions and enjoy privileges at selected merchants on travel and health."
+    },
+    {
+        "prompt": "The current savings account that allows me to earn Cashback on my debit card purchases.\n\n###\n\n",
+        "completion": "XtraSaver is our interest bearing current account that allows you to earn Cashback on your debit card purchases. You may earn up to 15% CashBack on petrol on top of prevailing station discounts and receive up to 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "The current savings account that allows me to earn up to 15% cashback on petrol.\n\n###\n\n",
+        "completion": "XtraSaver is our interest bearing current account that allows you to earn Cashback on your debit card purchases. You may earn up to 15% CashBack on petrol on top of prevailing station discounts and receive up to 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "The current savings account that allows me to earn up to 3% CashBack on petrol on my Mastercard debit card and credit card spends, regardless of where I am.\n\n###\n\n",
+        "completion": "XtraSaver is our interest bearing current account that allows you to earn Cashback on your debit card purchases. You may earn up to 15% CashBack on petrol on top of prevailing station discounts and receive up to 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "The savings account that allows me to earn up to 3.40% per annum of interest.\n\n###\n\n",
+        "completion": "With E-saver, you can earn up to 3.40% per annum interest on eligible deposit balance up to $2 million with no lock-in period. Enjoy the flexibility to access funds at any point."
+    },
+    {
+        "prompt": "The savings account that allows me to earn interests up to $2 million of deposit.\n\n###\n\n",
+        "completion": "With E-saver, you can earn up to 3.40% per annum interest on eligible deposit balance up to $2 million with no lock-in period."
+    },
+    {
+        "prompt": "The savings account that allows me to earn interests on my deposits but has no lock-in period.\n\n###\n\n",
+        "completion": "Enjoy flexibility to withdraw your deposit at any time while earning up to 3.40% per annum interest on eligible deposit up to $2 million with our E-saver account."
+    },
+    {
+        "prompt": "The savings account for elderly or retirees above 55 years old.\n\n###\n\n",
+        "completion": "MyWay offers a lifestyle programme for 55 years and above to enjoy a world of exclusive dining, travel and healthcare privileges. You may enjoy interest rates of up to 0.30%per annum with the MyWay Savings Account, access to income generating wealth solutions and enjoy privileges at selected merchants on travel and health."
+    },
+    {
+        "prompt": "The savings account with income generating wealth solutions and privileges at selected merchants on travel and health.\n\n###\n\n",
+        "completion": "MyWay offers a lifestyle programme for 55 years and above to enjoy a world of exclusive dining, travel and healthcare privileges. You may enjoy interest rates of up to 0.30%per annum with the MyWay Savings Account, access to income generating wealth solutions and enjoy privileges at selected merchants on travel and health."
+    },
+    {
+        "prompt": "The savings account for seniors and those about to retire. The account allow you to earn up to 0.30% p.a of interest.\n\n###\n\n",
+        "completion": "MyWay offers a lifestyle programme for 55 years and above to enjoy a world of exclusive dining, travel and healthcare privileges. You may enjoy interest rates of up to 0.30%per annum with the MyWay Savings Account, access to income generating wealth solutions and enjoy privileges at selected merchants on travel and health."
+    },
+    {
+        "prompt": "There are three products available for recommendation; a current account and two types of savings account.\n\n###\n\n",
+        "completion": "The current account is called XtraSaver, the savings account are MyWay and E-saver. Depending on your needs, I can recommend one of these to you."
+    },
+    {
+        "prompt": "The minimum age to open an account is 18 years old.\n\n###\n\n",
+        "completion": "This age requirement applies to XtraSaver, MyWay and E-saver."
+    },
+    {
+        "prompt": "Can you tell me more about XtraSaver? I have heard about it from my friends but I am not sure whether this is suitable for me.\n\n###\n\n",
+        "completion": "Definitely! XtraSaver is our interest bearing current account that allows you to earn Cashback on your debit card purchases. You may earn up to 15% CashBack on petrol on top of prevailing station discounts and receive up to 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "Can you tell me more about MyWay? I am thinking of applying for this for my parents.\n\n###\n\n",
+        "completion": "Definitely! MyWay offers a lifestyle programme for 55 years and above to enjoy a world of exclusive dining, travel and healthcare privileges. You may enjoy interest rates of up to 0.30%per annum with the MyWay Savings Account, access to income generating wealth solutions and enjoy privileges at selected merchants on travel and health."
+    },
+    {
+        "prompt": "Can you tell me more about E-saver? I saw your advertisement and it sounds good. Can you share with me more?\n\n###\n\n",
+        "completion": "Definitely! With E-saver, you can earn up to 3.40% per annum interest on eligible deposit balance up to $2 million with no lock-in period. Enjoy the flexibility to access funds at any point."
+    },
+    {
+        "prompt": "I am under 18 years old. What do you have to recommend to me?\n\n###\n\n",
+        "completion": "Unfortunately, we do not have any products for those below 18 years old for now. We are constantly adding more product offerings to cater to our clients different needs. We hope it won't be long before we have something for you."
+    },
+    {
+        "prompt": "I am above 30 years old. My goal is to save up for my upcoming wedding.\n\n###\n\n",
+        "completion": "Congratulations on your upcoming wedding, I am so happy for you! We have a product for customers like you. Introducing XtraSaver! XtraSaver is our interest bearing current account that allows you to earn Cashback on your debit card purchases. You may earn up to 15% CashBack on petrol on top of prevailing station discounts and receive up to 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "I am above 30 years old. My goal is to save up for rainy days.\n\n###\n\n",
+        "completion": "I heard you. Saving up for rainy days is really important, especially today. We have a product to recommend to you. Introducing XtraSaver! XtraSaver is our interest bearing current account that allows you to earn Cashback on your debit card purchases. You may earn up to 15% CashBack on petrol on top of prevailing station discounts and receive up to 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "I am above 30 years old. I have some funds that I will not be using for some time. I am looking for high interest rates.\n\n###\n\n",
+        "completion": "I heard your needs. Who doesn't love high interest rates. Let me introduce you to XtraSaver! XtraSaver is our interest bearing current account that allows you to earn Cashback on your debit card purchases. You may earn up to 15% CashBack on petrol on top of prevailing station discounts and receive up to 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "I am above 30 years old. I will be spending a lot of money for my upcoming wedding. Do you have a credit card to recommend to me that can provide me with the highest cashback on these purchases?\n\n###\n\n",
+        "completion": "Of course! We definitely do have a product for you and that is XtraSaver! XtraSaver is our interest bearing current account that allows you to earn Cashback on your debit card purchases. You may earn up to 15% CashBack on petrol on top of prevailing station discounts and receive up to 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "I am above 18 years old. I will be spending a lot of money for my university tuition fees. What do you have to recommend to me?\n\n###\n\n",
+        "completion": "Congratulations on entering university soon! I understand it can be worrying for you, especially the upcoming tuition fee expenses. We have just the right product to alleviate your concerns. Introducing XtraSaver! XtraSaver is our interest bearing current account that allows you to earn Cashback on your debit card purchases. You may earn up to 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "I am a 41 year old auntie with two children. I usually spend a lot of money on my groceries, utilities and bills.\n\n###\n\n",
+        "completion": "I heard your needs. We have many products suitable for you but there is one you definitely must apply for based on what I have heard. Introducing XtraSaver! XtraSaver is our interest bearing current account that allows you to earn Cashback on your debit card purchases. You may earn up to 15% CashBack on petrol and 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "I am a 21 year old fresh graduate. My goal is to own a BMW by the time I reach 30 years old.\n\n###\n\n",
+        "completion": "Wishing you the best in your financial goal! Here is something I would recommend you so you can reach your goal easier. Introducing E-saver! E-saver is our savings account that allow you to earn up to 3.40% per annum interest on eligible deposit balance up to $2 million with no lock-in period."
+    },
+    {
+        "prompt": "I am reaching 40 soon. I see my friends owning many properties and they are renting out to earn a passive income. I want to become like them. I want to retire in 10 years time, before I reach 50 years old.\n\n###\n\n",
+        "completion": "That goal sounds doable, especially with this product I would like to recommend you with. Introducing E-saver. E-saver is our savings account that allow you to earn up to 3.40% per annum interest on eligible deposit balance up to $2 million with no lock-in period."
+    },
+    {
+        "prompt": "I am expecting my first child soon, am expecting quite a lot of expenses for my child's education and necessities. We will also be moving into a new house soon to accomodate for our new addition to the family.\n\n###\n\n",
+        "completion": "Congratulations on your upcoming newborn, I am so happy for you! I sense your excitement but also worry for the expenses. No worries, I have something for you. Introducing XtraSaver! XtraSaver is our interest bearing current account that allows you to earn Cashback on your debit card purchases. You may earn up to 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "I am 17 years old this year. My parents is moving house soon, so we are expecting huge expenses for the next few months. What products do you have for me?\n\n###\n\n",
+        "completion": "I'm sorry, we do not have any recommended products for you now as you are below the minimum age for any of our accounts"
+    },
+    {
+        "prompt": "I am 17 years old this year. My parents is moving house soon, so we are expecting huge expenses for the next few months. What products do you have for my parents?\n\n###\n\n",
+        "completion": "You asked the right person. I would recommend XtraSaver. XtraSaver is our interest bearing current account that allows you to earn Cashback on your debit card purchases. You may earn up to 15% cashback on petrol on top of prevailing discounts and 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "I am worried about my parents retirement. Their current savings account with another bank is yielding very low interest rates. I am afraid they are not saving enough for their retirement. What do you have to recommend to them?\n\n###\n\n",
+        "completion": "I can understand retirement can be a stressful period given our current climate. Rest assure, I have the right product for you. Introducing MyWay! MyWay offers a lifestyle programme for 55 years and above to enjoy a world of exclusive dining, travel and healthcare privileges. You may enjoy interest rates of up to 0.30%per annum with the MyWay Savings Account, access to income generating wealth solutions and enjoy privileges at selected merchants on travel and health."
+    },
+    {
+        "prompt": "I am worried about my retirement. With the current inflation, it is scaring me. Do you have any retirement accounts that earn high interests?\n\n###\n\n",
+        "completion": "I hear your worries, it is totally valid. Let me introduce you to MyWay. MyWay offers a lifestyle programme for 55 years and above to enjoy a world of exclusive dining, travel and healthcare privileges. You may enjoy interest rates of up to 0.30%per annum with the MyWay Savings Account, access to income generating wealth solutions and enjoy privileges at selected merchants on travel and health."
+    },
+    {
+        "prompt": "I am looking for a bank account for my daughter. She is reaching 18 years old in just two years time. I am expecting she will be spending quite a lot on her polytechnic tuition. She needs to get a few things for her CCA. I heard from her friends.\n\n###\n\n",
+        "completion": "Your daughter is too young to open any of our bank accounts for now. But I can still share with you an account she may open after she reaches 18 years old. XtraSaver is our interest bearing current account that allows you to earn Cashback on your debit card purchases. You may earn up to 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "I am looking for something for my wife. She is a retiree and does not have much savings since she works part-time as a cleaner previously. I am worried for her. Do you have anything to recommend?\n\n###\n\n",
+        "completion": "You are a thoughtful husband thinking about your wife's future. I do have a product to recommend for your wife, and I am sure this will suit her needs. Introducing MyWay! MyWay offers a lifestyle programme for 55 years and above to enjoy a world of exclusive dining, travel and healthcare privileges. You may enjoy interest rates of up to 0.30%per annum with the MyWay Savings Account, access to income generating wealth solutions and enjoy privileges at selected merchants on travel and health."
+    },
+    {
+        "prompt": "I am looking for something for my husband. He just retired. He has quite a bit of savings haha so retirement is not a concern. But I am still worried since he does not save much, spend and spend only!\n\n###\n\n",
+        "completion": "You are a thoughtful wife to your husband. Let me introduce something for your husband based on what you have described. XtraSaver is our interest bearing current account that allows you to earn Cashback on your debit card purchases. You may earn up to 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "I am looking for something for my child. He is 8 years old now. Do you have something for him to save until 21 years old when he will enter tertiary education? What product do you have to recommend to me?\n\n###\n\n",
+        "completion": "I'm sorry, I currently do not have any products suitable for your child since he is below 18 years old, the minimum age to open any bank account we have."
+    },
+    {
+        "prompt": "I am 60 years old. I do not intend to retire soon. I do not have much things to spend on actually. What product do you recommend to me?\n\n###\n\n",
+        "completion": "I hear your needs and lifestyle. I would recommend my customers like you to open a MyWay account. MyWay offers a lifestyle programme for 55 years and above to enjoy a world of exclusive dining, travel and healthcare privileges. You may enjoy interest rates of up to 0.30%per annum with the MyWay Savings Account, access to income generating wealth solutions and enjoy privileges at selected merchants on travel and health."
+    },
+    {
+        "prompt": "I am 24 years old. I aim to retire by the age of 35 years old haha though I am not sure whether that is possible?! Sounds crazy huh? Yeah, my mom says that of me sometimes. I am still spending a lot, sometimes I travel, sometimes I just buy things because they are so cute! Help me!\n\n###\n\n",
+        "completion": "Interesting! You have financial goals in mind and I want to support you. I would recommend you to open our E-saver account. E-saver is our savings account that allow you to earn up to 3.40% p.a. interest on eligible deposit balance up to $2 million with no lock-in period."
+    },
+    {
+        "prompt": "I am spending quite a lot lately. My friends are all telling me that I might as well apply for a credit card here. But I am not sure which one is it. Do you know which one my friend is referring to?\n\n###\n\n",
+        "completion": "Your friend is right. I do have a product that could complement your needs. I would recommend you to open a XtraSaver account with us. You might wonder what XtraSaver is. XtraSaver is our interest bearing current account that allows you to earn Cashback on your debit card purchases. You may earn up to 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "Given the current inflation, I am not spending much. My goal is to just save as much as possible for now. The inflation and pandemic has taught me the importance of savings! Do you have something for me?\n\n###\n\n",
+        "completion": "I hear you. Savings are very important and I want to support you in building your savings. Introducing E-saver! E-saver is our savings account that allow you to earn up to 3.40% p.a. interest on eligible deposit balance up to $2 million with no lock-in period."
+    },
+    {
+        "prompt": "Do you think it's possible to save 1 million dollars by the time I reach 30 years old? Yes, I am looking for such a bank account.\n\n###\n\n",
+        "completion": "Of course! I have something to recommend to you. Introducing E-saver! E-saver is our savings account that allow you to earn up to 3.40% p.a. interest on eligible deposit balance up to $2 million with no lock-in period."
+    },
+    {
+        "prompt": "My mum asked me to open a bank account for her since she spends so much on groceries, she might as well open an account that gives her a credit card with maximum savings.\n\n###\n\n",
+        "completion": "Your mum is right. I have something that will definitely attract you, E-saver account! E-saver is our savings account that allow you to earn up to 3.40% p.a. interest on eligible deposit balance up to $2 million with no lock-in period."
+    },
+    {
+        "prompt": "My hobbies include travelling. So far, I have explored 12 countries, even though I am only 17 years old. Can you recommend something for me based on my hobby?\n\n###\n\n",
+        "completion": "I'm sorry, we do not have any products for you because you are below 18 years old, the minimum age to open any bank account with us. However, I can still recommend something for you given you will reach 18 years old soon. Based on what I hear from you, XtraSaver will complement your lifestyle. XtraSaver is our interest bearing current account that allows you to earn Cashback on your debit card purchases. You may earn up to 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "I really love travelling! But I will probably take a break for now since I am intending to save up for a career change. Need some spare cash since job economy is so bad now. What do you have for me?\n\n###\n\n",
+        "completion": "I love travelling too! I hear what you have shared, thanks for letting me know. After considering your lifestyle, I would recommend you to open a E-saver account. You might not have heard about it so allow me to share. E-saver is our savings account that allow you to earn up to 3.40% p.a. interest on eligible deposit balance up to $2 million with no lock-in period."
+    },
+    {
+        "prompt": "Travelling is my number one thing! So I think I spend a lot LOL. Do you have something for someone who spends so frivolously and not prudently? Omg I am feeling embarassed from even saying this. I probably need to change.\n\n###\n\n",
+        "completion": "Travelling is my number one thing too! Hearing your spending habits, I would recommend XtraSaver! XtraSaver is our interest bearing current account that allows you to earn up to 15% CashBack on petrol on top of prevailing discounts and Cashback on your debit card purchases. You may earn up to 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt": "I recently got scammed! I am so furious. I need a fast way to build up the remaining savings I have. Why would the scammers do something to a 60 year old like me? Please help me recommend a bank account so I can retire in peace soon. I do not want to work till I drop dead.\n\n###\n\n",
+        "completion": "I am so sorry to hear that, it must be very frustrating! Let me see how I can help you. Hmm, I would recommend MyWay for seniors and retirees above 55 years old like you. MyWay offers a lifestyle programme for 55 years and above to enjoy a world of exclusive dining, travel and healthcare privileges. You may enjoy interest rates of up to 0.30%per annum with the MyWay Savings Account, access to income generating wealth solutions and enjoy privileges at selected merchants on travel and health."
+    },
+    {
+        "prompt": "My wife and I are both no longer working since we are old now. We want to open a bank account so we can save up enough. Do you have anything to recommend for us so that we have enough savings and not have to rely on our children for support?\n\n###\n\n",
+        "completion": "Thanks for sharing. Based on your needs, I would recommend you to open our MyWay account. MyWay offers a lifestyle programme for 55 years and above to enjoy a world of exclusive dining, travel and healthcare privileges. You may enjoy interest rates of up to 0.30%p.a. with the MyWay Savings Account, access to income generating wealth solutions and enjoy privileges at selected merchants on travel and health."
+    },
+    {
+        "prompt": "I am a single widow, reaching 55 years old soon. I do have some CPF withdrawals coming soon. I am not sure what to do with this money since I do not spend much. Do you have anything to recommend to me to save up these CPF money? Preferably something to grow these savings further.\n\n###\n\n",
+        "completion": "Thanks for letting me know your circumstances. I have considered your needs and would highly recommend you to get our MyWay account. MyWay offers a lifestyle programme for 55 years and above to enjoy a world of exclusive dining, travel and healthcare privileges. You may enjoy interest rates of up to 0.30%p.a. with the MyWay Savings Account, access to income generating wealth solutions and enjoy privileges at selected merchants on travel and health."
+    },
+    {
+        "prompt": "I am looking to open a current account. What are the types of savings accounts you have?\n\n###\n\n",
+        "completion": "We have one type of current account currently. For current account, we have XtraSaver, an interest bearing account with cashback on card purchases. It allows you to earn Cashback on your debit card purchases. You may earn up to 15% CashBack on petrol and 3% CashBack on your MasterCard transactions, anywhere in the world."
+    },
+    {
+        "prompt":"I am looking to open a savings account. What are the types of savings account you have?\n\n###\n\n",
+        "completion": "We have two types of savings account, one called MyWay and the other called E-saver. MyWay offers a lifestyle programme for 55 years and above to enjoy a world of exclusive dining, travel and healthcare privileges. You may enjoy interest rates of up to 0.30%p.a. with the MyWay Savings Account, access to income generating wealth solutions and enjoy privileges at selected merchants on travel and health. E-saver is our savings account that allow you to earn up to 3.40% p.a. interest on eligible deposit balance up to $2 million with no lock-in period. "
+    }
+]   
