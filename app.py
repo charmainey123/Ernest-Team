@@ -1,9 +1,12 @@
 from flask import Flask, request
+from flask_socketio import SocketIO
+from subprocess import Popen, PIPE
 from flask_cors import CORS
 import psycopg2
 
 app = Flask(__name__)
 CORS(app)
+socketio = SocketIO(app, cors_allowed_origins='*')
 
 # Define connection parameters
 connection_params = {
@@ -51,7 +54,16 @@ def insert_data():
         if conn:
             conn.close()
 
-# Add more routes and logic as needed
+@socketio.on('connect')
+def handle_connect():
+    # Start the Python script in the background and capture the output
+    process = Popen(['python', "./speechRecognition.py"], stdout=PIPE, stderr=PIPE)
+    
+    # Continuously send the output to the frontend
+    while True:
+        output = process.stdout.readline().decode().strip()
+        if output:
+            socketio.emit('script_output', output)
 
 if __name__ == '__main__':
-    app.run()
+    socketio.run(app)
