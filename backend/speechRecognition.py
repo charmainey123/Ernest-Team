@@ -10,11 +10,11 @@ from datetime import datetime
 
 # Initializing all variables
 # Reading API Key
-with open("./apikey.txt") as file:
+with open("./backend/apikey.txt") as file:
     openai.api_key = file.read()
 
 # Define path to audio output file
-output_audio_file = "./output.mp3"
+output_audio_file = "./backend/output.mp3"
 
 # Initializing text-to-speech object
 engine = pyttsx3.init()
@@ -126,4 +126,4 @@ while True:
         continue
 
 # Delete the audio file
-os.remove("./output.mp3")
+os.remove("./backend/output.mp3")
