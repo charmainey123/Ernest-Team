@@ -2,9 +2,12 @@ from flask import Flask, request
 from flask_cors import CORS
 import psycopg2
 import subprocess
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 
 app = Flask(__name__)
 CORS(app)
+limiter = Limiter(get_remote_address, app=app)
 
 # Define connection parameters
 connection_params = {
@@ -54,12 +57,13 @@ def insert_data():
             conn.close()
 
 @app.route('/execute_voice_recognition', methods=['POST'])
+@limiter.limit("1/minute")
 def execute_voice_recognition():
-        try:
-            subprocess.call(['python', './backend/speechRecognition.py'])
-            return 'Python script executed successfully!'
-        except Exception as e:
-            return f'Error executing Python script: {str(e)}'
+    try:
+        subprocess.call(['python', './backend/speechRecognition.py'])
+        return 'Python script executed successfully!'
+    except Exception as e:
+        return f'Error executing Python script: {str(e)}'
 
 if __name__ == '__main__':
     app.run()
