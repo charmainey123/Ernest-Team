@@ -54,14 +54,15 @@ const FormApp = () => {
     console.log(formData);
     try{
       const data = {
-        name: 'John',
-        email: 'john@gmail.com',
-        mobile: '123',
-        currency: 'SGD',
-        id: '123',
-        country: 'SG',
-        taxId: '123',
-        purpose: 'savings'
+        name: formData.name,
+        email: formData.email,
+        mobile: formData.mobile,
+        currency: formData.currency,
+        id: formData.id,
+        country: formData.country,
+        taxId: formData.taxId,
+        purpose: formData.purpose,
+        type: formData.type
       }
       const response = await axios.post('http://localhost:5000/insert_data', data);
       console.log(response.data.message)
@@ -170,7 +171,7 @@ const FormApp = () => {
           value={formData.country}
           onChange={handleChange}
           onInput={handleInput}
-          pattern="[A-Za-z]"
+          pattern="[A-Za-z]*"
           maxLength={50}
           title="Maximum of 50 alphabetic characters."
           required 

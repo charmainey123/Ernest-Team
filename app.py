@@ -33,13 +33,14 @@ def insert_data():
     country = data['country']
     taxId = data['taxId']
     purpose = data['purpose']
+    type = data['type']
 
     try:
         conn = psycopg2.connect(**connection_params)
         cursor = conn.cursor()
 
-        query = "insert into application (full_name, email_address, mobile_number, account_currency_code, id_number, country_of_tax_residence, tax_identification_number, purpose_of_account) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
-        values = (name, email, mobile, currency, id, country, taxId, purpose)
+        query = "insert into application (full_name, email_address, mobile_number, account_currency_code, id_number, country_of_tax_residence, tax_identification_number, purpose_of_account, product_type) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+        values = (name, email, mobile, currency, id, country, taxId, purpose, type)
 
         cursor.execute(query, values)
         conn.commit()
