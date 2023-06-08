@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './form.css';
 
@@ -48,7 +48,6 @@ const FormApp = () => {
     }));
   };
 
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(formData);
@@ -78,6 +77,21 @@ const FormApp = () => {
       [name]: value
     }));
   };
+
+  useEffect(() => {
+    const executePythonScript = async () => {
+      try {
+        await fetch('http://localhost:5000/execute_voice_recognition', {
+          method: 'POST'
+        });
+
+        console.log('Voice recognition backend script executed successfully!');
+      } catch (error) {
+        console.error('Error executing python script', error);
+      }
+    };
+    executePythonScript();
+  }, [])
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '10px', marginLeft: '30px'}}>
