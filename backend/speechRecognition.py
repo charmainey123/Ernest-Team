@@ -77,14 +77,6 @@ def post_to_database(conversation_id, role_id, response):
         print("Error posting results to database. Please check your connection.")
 
 # Audio-Response Generation
-"""
-This part of the code is triggered when the user clicks on the button "speak to Ernest"
-"""
-
-"""
-This part of the code is triggered when the user clicks on the button "speak to Ernest"
-"""
-
 def trigger_response():
     try:
         with sr.Microphone() as mic:
@@ -101,6 +93,8 @@ def trigger_response():
             post_to_database(conversation_id, 'user', transcript)
             print("You:\n", transcript,"\n")
             response = generate_response(transcript)
+            with open('./backend/response.txt', 'w') as file:
+                file.write(response)
             post_to_database(conversation_id, 'assistant', response)
             print("Ernest:\n", response, "\n")
 

@@ -93,6 +93,26 @@ const FormApp = () => {
     executePythonScript();
   }, [])
 
+  const [ernestResponse, setErnestResponse] = useState('');
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      fetch('../../../backend/response.txt')
+      .then(response => response.text())
+      .then(text => {
+        if (text !== ernestResponse) {
+          setErnestResponse(text);
+        }
+      })
+      .catch(error => {
+        console.error('Error reading file:', error);
+      });
+    }, 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [ernestResponse]);
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '10px', marginLeft: '30px'}}>
     {/* <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginTop: '70px', marginLeft: '30px'}}> */}
