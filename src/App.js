@@ -23,6 +23,8 @@ function App() {
 
   };
 
+  
+
   return (
     <div className='main'>
       {redirectActive === 1 && <AvatarWelcomeModal setRedirectActive={setRedirectActive} />}

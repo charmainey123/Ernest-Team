@@ -3,8 +3,8 @@ import axios from 'axios';
 import './form.css';
 
 import '../../styles/commonmodal.css'
-import { Button } from '@mui/material';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import '../modals/SubmissionConfirmationModal'
+import SubmissionConfirmationModal from '../modals/SubmissionConfirmationModal';
 
 const FormApp = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
@@ -28,7 +28,6 @@ const FormApp = ({ onSubmit }) => {
     borderRadius: '4px',
     cursor: 'pointer',
   };
-
 
   // const handleInvalid = (title) => (event) => {
   //   const input = event.target;
@@ -69,19 +68,19 @@ const FormApp = ({ onSubmit }) => {
       }
       const response = await axios.post('http://localhost:5000/insert_data', data);
       console.log(response.data.message)
+      setShowSuccessModal(true);
     } catch (error) {
       console.error(error);
     }
 
-    // Perform form validation here
-    const isValid = Object.values(formData).every((field) => field);
-    setIsFormValid(isValid);
+    // // Perform form validation here
+    // const isValid = Object.values(formData).every((field) => field);
+    // setIsFormValid(isValid);
 
-    if (isValid) {
+    // if (isValid) {
       // Call the onSubmit prop if all fields are valid
-      onSubmit();
-      setShowSuccessModal(true);
-    }
+//  onSubmit();
+    // }
   };
 
   const handleOptionChange = (event) => {
@@ -108,7 +107,7 @@ const FormApp = ({ onSubmit }) => {
   }, [])
 
   // Check if all required fields are valid
-  const [isFormValid, setIsFormValid] = useState(false);
+  // const [isFormValid, setIsFormValid] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   // const handleFormSubmit = () => {
@@ -128,6 +127,9 @@ const FormApp = ({ onSubmit }) => {
       {/* <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginTop: '70px', marginLeft: '30px'}}> */}
 
       <h1 style={{ justifyContent: 'center', color: 'darkblue' }}>Account Application Form</h1>
+      <div>
+        {showSuccessModal && <SubmissionConfirmationModal />}
+      </div>
       <form onSubmit={handleSubmit} style={{ border: '1px solid black', background: 'white', padding: '35px' }}>
         <div style={{ display: 'flex', justifyContent: 'right', marginTop: '15px' }}>
           <label htmlFor="name">Full Name:</label>
