@@ -4,7 +4,6 @@ import './form.css';
 import '../../styles/commonmodal.css'
 import '../modals/SubmissionConfirmationModal'
 import SubmissionConfirmationModal from '../modals/SubmissionConfirmationModal';
-import Snackbar from '@mui/material/Snackbar';
 
 const FormApp = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
