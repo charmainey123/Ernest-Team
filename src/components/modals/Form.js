@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './form.css';
-
 import '../../styles/commonmodal.css'
 import '../modals/SubmissionConfirmationModal'
 import SubmissionConfirmationModal from '../modals/SubmissionConfirmationModal';
+import Snackbar from '@mui/material/Snackbar';
 
 const FormApp = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
@@ -18,7 +18,6 @@ const FormApp = ({ onSubmit }) => {
     purpose: '',
     type: ''
   });
-
 
   const buttonStyle = {
     backgroundColor: 'green',
@@ -79,6 +78,7 @@ const FormApp = ({ onSubmit }) => {
 
   const handleCloseSubmissionModal = () => {
     setShowSuccessModal(false)
+    setShowListening(false)
     setFormData({
       name: '',
       email: '',
@@ -98,8 +98,8 @@ const FormApp = ({ onSubmit }) => {
         await fetch('http://localhost:5000/execute_voice_recognition', {
           method: 'POST'
         });
-
         console.log('Voice recognition backend script executed successfully!');
+        setShowListening(true)
       } catch (error) {
         console.error('Error executing python script', error);
       }
@@ -126,7 +126,9 @@ const FormApp = ({ onSubmit }) => {
       clearInterval(interval);
     };
   }, [ernestResponse]);
+
   const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [showListening, setShowListening] = useState(false);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '10px', marginLeft: '30px' }}>
@@ -134,7 +136,10 @@ const FormApp = ({ onSubmit }) => {
 
       <h1 style={{ justifyContent: 'center', color: 'darkblue' }}>Account Application Form</h1>
       <div>
-        {showSuccessModal && <SubmissionConfirmationModal closeModal={handleCloseSubmissionModal}/>}
+        {showSuccessModal && <SubmissionConfirmationModal closeModal={handleCloseSubmissionModal} message="You have submitted your form successfully"/>}
+      </div>
+      <div>
+        {showListening && <SubmissionConfirmationModal closeModal={handleCloseSubmissionModal} message="Say 'Hi Ernest' for assistance at any time. Ernest is listening, but may take time to respond. We appreciate your understanding."/>}
       </div>
       <form onSubmit={handleSubmit} style={{ border: '1px solid black', background: 'white', padding: '35px' }}>
         <div style={{ display: 'flex', justifyContent: 'right', marginTop: '15px' }}>
