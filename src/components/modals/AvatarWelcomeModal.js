@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import "../../styles/avatarwelcomemodal.css";
+import "../../styles/commonmodal.css";
 import video from '../../videos/welcome-talk.mp4';
-// import { useNavigate } from 'react-router-dom';
-// import { createBrowserHistory } from 'history';
 
 function AvatarWelcomeModal({ setRedirectActive }) {
 
