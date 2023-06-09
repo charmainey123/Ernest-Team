@@ -29,11 +29,6 @@ const FormApp = ({ onSubmit }) => {
     cursor: 'pointer',
   };
 
-  // const handleInvalid = (title) => (event) => {
-  //   const input = event.target;
-  //   input.setCustomValidity('Please match the requested format: ' + title);
-  // };
-
   const handleInput = (title) => (event) => {
     const input = event.target;
     if (input.validity.valueMissing) {
@@ -72,15 +67,6 @@ const FormApp = ({ onSubmit }) => {
     } catch (error) {
       console.error(error);
     }
-
-    // // Perform form validation here
-    // const isValid = Object.values(formData).every((field) => field);
-    // setIsFormValid(isValid);
-
-    // if (isValid) {
-      // Call the onSubmit prop if all fields are valid
-//  onSubmit();
-    // }
   };
 
   const handleOptionChange = (event) => {
@@ -90,6 +76,21 @@ const FormApp = ({ onSubmit }) => {
       [name]: value
     }));
   };
+
+  const handleCloseSubmissionModal = () => {
+    setShowSuccessModal(false)
+    setFormData({
+      name: '',
+      email: '',
+      mobile: '',
+      currency: '',
+      id: '',
+      country: '',
+      taxId: '',
+      purpose: '',
+      type: ''
+    })
+  }
 
   useEffect(() => {
     const executePythonScript = async () => {
@@ -106,21 +107,7 @@ const FormApp = ({ onSubmit }) => {
     executePythonScript();
   }, [])
 
-  // Check if all required fields are valid
-  // const [isFormValid, setIsFormValid] = useState(false);
   const [showSuccessModal, setShowSuccessModal] = useState(false);
-
-  // const handleFormSubmit = () => {
-  //   setShowForm(false);
-  //   setShowSubmissionConfirmationModal(true);
-  // };
-
-  // const handleSubmitButtonClick = () => {
-  //   if (isFormValid) {
-  //     on(); // Call the onClick handler from the props
-  //     setShowSubmissionConfirmationModal(true);
-  //   }
-  // };
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '10px', marginLeft: '30px' }}>
@@ -128,7 +115,7 @@ const FormApp = ({ onSubmit }) => {
 
       <h1 style={{ justifyContent: 'center', color: 'darkblue' }}>Account Application Form</h1>
       <div>
-        {showSuccessModal && <SubmissionConfirmationModal />}
+        {showSuccessModal && <SubmissionConfirmationModal closeModal={handleCloseSubmissionModal}/>}
       </div>
       <form onSubmit={handleSubmit} style={{ border: '1px solid black', background: 'white', padding: '35px' }}>
         <div style={{ display: 'flex', justifyContent: 'right', marginTop: '15px' }}>
