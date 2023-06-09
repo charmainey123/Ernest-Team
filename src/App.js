@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import AvatarWelcomeModal from './components/modals/AvatarWelcomeModal';
 import Form from './components/modals/Form';
 
+
 // ernest's part, which is not needed by char and I's ui
 // import MainLayout from './components/MainLayout'
 // import WelcomeScreen from './components/modals/WelcomeScreen';
@@ -18,10 +19,14 @@ function App() {
     setRedirectActive(1);
   }, []);
 
+  const handleFormSubmit = () => {
+
+  };
+
   return (
     <div className='main'>
       {redirectActive === 1 && <AvatarWelcomeModal setRedirectActive={setRedirectActive} />}
-      {redirectActive === 2 && <Form />}
+      {redirectActive === 2 && <Form onSubmit={handleFormSubmit} />}
 
       {/* ernest's part, which is not needed by char and I's ui */}
       {/* <button onClick={() => openModal('welcome')}>Open Welcome Screen</button>
@@ -43,4 +48,3 @@ function App() {
 }
 
 export default App;
- 
