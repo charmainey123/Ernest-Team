@@ -93,7 +93,7 @@ def trigger_response():
             post_to_database(conversation_id, 'user', transcript)
             print("You:\n", transcript,"\n")
             response = generate_response(transcript)
-            with open('./backend/response.txt', 'w') as file:
+            with open('./public/response.txt', 'w') as file:
                 file.write(response)
             post_to_database(conversation_id, 'assistant', response)
             print("Ernest:\n", response, "\n")

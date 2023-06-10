@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from 'react';
-
+import CreateAvatarResponse from './components/api-calls-avatar/CreateAvatarResponse';
 import AvatarWelcomeModal from './components/modals/AvatarWelcomeModal';
 import Form from './components/modals/Form';
-
-
-// ernest's part, which is not needed by char and I's ui
-// import MainLayout from './components/MainLayout'
-// import WelcomeScreen from './components/modals/WelcomeScreen';
-// import AccSelectionScreen from './components/modals/AccSelectionScreen.js';
-// import CreateAvatarResponse from './components/api-calls-avatar/CreateAvatarResponse';
-// import CreateInput from './components/api-calls-avatar/CreateInput';
+import axios from 'axios';
 
 function App() {
 
@@ -23,28 +16,58 @@ function App() {
 
   };
 
+  //---------------------------Python Script will run when app starts. Use this code to transfer to any component-------------------------------------------------------------
   
+  useEffect(() => {
+    const executePythonScript = async () => {
+      try {
+        await fetch('http://localhost:5000/execute_voice_recognition', {
+          method: 'POST'
+        });
+
+        console.log('Voice recognition backend script executed successfully!');
+      } catch (error) {
+        console.error('Error executing python script', error);
+      }
+    };
+    executePythonScript();
+  }, [])
+
+  const [ernestResponse, setErnestResponse] = useState('');
+  
+  useEffect(() => {
+
+    const interval = setInterval(() => {
+      console.log(ernestResponse)
+      fetch('/response.txt')
+      .then(response => {
+        return response.text();
+      })
+      .then(text => {
+        if(text !== ernestResponse){
+          setErnestResponse(text);
+        console.log('Text is changed' + ernestResponse)
+        }
+      })
+      .catch(error => {
+        console.error('Error reading file:', error);
+      });
+    }, 1000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [ernestResponse]);
+
+
+//-----------code ends here-------------------------------------------------------------
+
+
 
   return (
     <div className='main'>
-      {redirectActive === 1 && <AvatarWelcomeModal setRedirectActive={setRedirectActive} />}
+      {redirectActive === 1 && !ernestResponse && <AvatarWelcomeModal setRedirectActive={setRedirectActive} />}
+      {redirectActive === 1 && ernestResponse && <CreateAvatarResponse setRedirectActive={setRedirectActive} ernestResponse={ernestResponse} />}
       {redirectActive === 2 && <Form onSubmit={handleFormSubmit} />}
-
-      {/* ernest's part, which is not needed by char and I's ui */}
-      {/* <button onClick={() => openModal('welcome')}>Open Welcome Screen</button>
-      <button onClick={() => openModal('accSelection')}>Open AccSelection Screen</button>
-      {/* Below sets rule for what is rendered by specifying the activePage */}
-      {/* {activePage === 'welcome' && (
-        //  Below passes closeModal funcyion as a prop so that the WelcomeScreen component can use it.
-        <WelcomeScreen closeModal={closeModal} />
-      )}
-      {activePage === 'accSelection' && (
-        <AccSelectionScreen closeModal={closeModal} />
-      )}
-
-      <MainLayout />
-      <CreateAvatarResponse />
-      <CreateInput /> */}
     </div>
   );
 }
