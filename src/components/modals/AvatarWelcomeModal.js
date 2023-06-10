@@ -18,7 +18,7 @@ function AvatarWelcomeModal({ setRedirectActive }) {
                 // Close the modal here
                 setAvatarModalIsOpen(false);
                 setRedirectActive(2);
-            }, 2000);
+            }, 500);
 
             return () => clearTimeout(timer);
         }
