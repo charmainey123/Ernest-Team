@@ -4,6 +4,7 @@ import './form.css';
 import '../../styles/commonmodal.css'
 import '../modals/SubmissionConfirmationModal'
 import SubmissionConfirmationModal from '../modals/SubmissionConfirmationModal';
+import AutofillForm from './AutofillForm';
 
 const FormApp = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
@@ -107,19 +108,19 @@ const FormApp = ({ onSubmit }) => {
   }, [])
 
   const [ernestResponse, setErnestResponse] = useState('');
-  
+
   useEffect(() => {
     const interval = setInterval(() => {
       fetch('../../../backend/response.txt')
-      .then(response => response.text())
-      .then(text => {
-        if (text !== ernestResponse) {
-          setErnestResponse(text);
-        }
-      })
-      .catch(error => {
-        console.error('Error reading file:', error);
-      });
+        .then(response => response.text())
+        .then(text => {
+          if (text !== ernestResponse) {
+            setErnestResponse(text);
+          }
+        })
+        .catch(error => {
+          console.error('Error reading file:', error);
+        });
     }, 1000);
     return () => {
       clearInterval(interval);
@@ -134,12 +135,19 @@ const FormApp = ({ onSubmit }) => {
       {/* <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginTop: '70px', marginLeft: '30px'}}> */}
 
       <h1 style={{ justifyContent: 'center', color: 'darkblue' }}>Account Application Form</h1>
+
+      {/* <div>
+        {showSuccessModal && <SubmissionConfirmationModal closeModal={handleCloseSubmissionModal} message="You have submitted your form successfully" />}
+      </div> */}
+
       <div>
-        {showSuccessModal && <SubmissionConfirmationModal closeModal={handleCloseSubmissionModal} message="You have submitted your form successfully"/>}
+        {showListening && <SubmissionConfirmationModal closeModal={handleCloseSubmissionModal} message="Say 'Hi Ernest' for assistance at any time. Ernest is listening, but may take time to respond. We appreciate your understanding." />}
       </div>
+      {/* if the autofillform is used */}
       <div>
-        {showListening && <SubmissionConfirmationModal closeModal={handleCloseSubmissionModal} message="Say 'Hi Ernest' for assistance at any time. Ernest is listening, but may take time to respond. We appreciate your understanding."/>}
+        {showSuccessModal && <AutofillForm closeModal={handleCloseSubmissionModal} />}
       </div>
+
       <form onSubmit={handleSubmit} style={{ border: '1px solid black', background: 'white', padding: '35px' }}>
         <div style={{ display: 'flex', justifyContent: 'right', marginTop: '15px' }}>
           <label htmlFor="name">Full Name:</label>

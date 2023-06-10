@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import AvatarWelcomeModal from './components/modals/AvatarWelcomeModal';
 import Form from './components/modals/Form';
+import AutofillForm from './components/modals/AutofillForm';
 
 
 // ernest's part, which is not needed by char and I's ui
@@ -19,16 +20,30 @@ function App() {
     setRedirectActive(1);
   }, []);
 
+  const [displayAutofillData, setDisplayAutofillData] = useState(null)
+
+  const handleAutofillFormSubmit = (data) => {
+    setDisplayAutofillData(data);
+  };
+
+  const handleAutofillModalClose = () => {
+    setDisplayAutofillData(null);
+  };
+
+
   const handleFormSubmit = () => {
 
   };
 
-  
+
 
   return (
     <div className='main'>
       {redirectActive === 1 && <AvatarWelcomeModal setRedirectActive={setRedirectActive} />}
-      {redirectActive === 2 && <Form onSubmit={handleFormSubmit} />}
+      {redirectActive === 2 && <Form onSubmit={handleAutofillFormSubmit} />}
+      {displayAutofillData && (
+        <AutofillForm data={displayAutofillData} onClose={handleAutofillModalClose} />
+      )}
 
       {/* ernest's part, which is not needed by char and I's ui */}
       {/* <button onClick={() => openModal('welcome')}>Open Welcome Screen</button>
