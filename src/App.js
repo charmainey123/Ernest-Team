@@ -73,7 +73,6 @@ function App() {
       {redirectActive === 1 && ernestResponse && <CreateAvatarResponse setRedirectActive={setRedirectActive} ernestResponse={ernestResponse} />}
       {redirectActive === 2 && <Form onSubmit={handleFormSubmit} />}
       {redirectActive === 2 && !ernestResponse && showListening && <SubmissionConfirmationModal closeModal={handleCloseListening} message="Try saying 'Hi Ernest' now. Ernest is listening, but may take time to respond. We appreciate your understanding."/>}
-      {redirectActive === 1 && ernestResponse && showListening && <SubmissionConfirmationModal closeModal={handleCloseListening} message="Oops, Ernest has to leave! He has a message for you before he goes though. Here it is, and we hoped you enjoyed his service."/>}
     </div>
   );
 }

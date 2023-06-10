@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { LinearProgress } from '@mui/material';
 
 
 //makeAPICall1 is a POST method to generate the video, using text input from chatgpt and an image from online storage.
@@ -20,7 +21,7 @@ function CreateAvatarResponse({ setRedirectActive, ernestResponse }) {
       headers: {
         accept: 'application/json',
         'content-type': 'application/json',
-        authorization: 'Basic WlRRek16TTRPRGczUUdkdFlXbHNMbU52YlE6SjRHSzduQW5CMHhRTmtfV051Vlpk'
+        authorization: 'Basic WlRreE9USTVNVEE1UUdkdFlXbHNMbU52YlE6a1I5WnhKYkJKaUlYUDROUzlQWDFS'
       },
       body: JSON.stringify({
         script: {
@@ -31,7 +32,7 @@ function CreateAvatarResponse({ setRedirectActive, ernestResponse }) {
           input: ernestResponse
         },
         config: { fluent: 'false', pad_audio: '0.0' },
-        source_url: 's3://d-id-images-prod/google-oauth2|106368381363813690544/img_9J9pfGmukcBPX2_65yA_c/passport_ernest.jpeg' //this image might expire. Image upload can be done on the D-ID website.
+        source_url: 's3://d-id-images-prod/google-oauth2|100779621296352756305/img_Z_nMMerw3oCM5LPH43eQ8/passport_ernest.jpeg' //this image might expire. Image upload can be done on the D-ID website.
       })
     };
 
@@ -55,7 +56,7 @@ function CreateAvatarResponse({ setRedirectActive, ernestResponse }) {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        authorization: 'Basic WlRRek16TTRPRGczUUdkdFlXbHNMbU52YlE6SjRHSzduQW5CMHhRTmtfV051Vlpk'
+        authorization: 'Basic WlRreE9USTVNVEE1UUdkdFlXbHNMbU52YlE6a1I5WnhKYkJKaUlYUDROUzlQWDFS'
       }
     };
 
@@ -68,7 +69,7 @@ function CreateAvatarResponse({ setRedirectActive, ernestResponse }) {
         console.log('resultURL:', url);
       })
       .catch(err => console.error(err));
-    }, 15000); //Wait for 10 seconds before making the call
+    }, 20000); //Wait for 10 seconds before making the call
   };
 
   useEffect(() => {  //runs when the ernestResponse prop changes
@@ -101,14 +102,13 @@ useEffect(() => {
   {createAvatarModalIsOpen && (
   <div className="overlay">
     <div className="modal-content">
-  <h1>Video Example</h1>
   {resultUrl ? (
     <video controls autoPlay ref={videoRef} onEnded={handleAvatarVideoEnd}>
       <source src={resultUrl} type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   ) : (
-    <p>Loading video...</p>
+    <p>Ernest is thinking of a reply. Please wait! </p>
   )}
 </div>
 </div>
