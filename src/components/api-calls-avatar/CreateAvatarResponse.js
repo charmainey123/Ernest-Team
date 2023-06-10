@@ -21,7 +21,7 @@ function CreateAvatarResponse({ setRedirectActive, ernestResponse }) {
       headers: {
         accept: 'application/json',
         'content-type': 'application/json',
-        authorization: 'Basic WlRreE9USTVNVEE1UUdkdFlXbHNMbU52YlE6a1I5WnhKYkJKaUlYUDROUzlQWDFS'
+        authorization: 'Basic WlRNeE1Ua3lNVEUzUUdkdFlXbHNMbU52YlE6SnhPZXdsWkV0MldKU1BMT2ZFdHBH'
       },
       body: JSON.stringify({
         script: {
@@ -56,7 +56,7 @@ function CreateAvatarResponse({ setRedirectActive, ernestResponse }) {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        authorization: 'Basic WlRreE9USTVNVEE1UUdkdFlXbHNMbU52YlE6a1I5WnhKYkJKaUlYUDROUzlQWDFS'
+        authorization: 'Basic WlRNeE1Ua3lNVEUzUUdkdFlXbHNMbU52YlE6SnhPZXdsWkV0MldKU1BMT2ZFdHBH'
       }
     };
 
@@ -69,7 +69,7 @@ function CreateAvatarResponse({ setRedirectActive, ernestResponse }) {
         console.log('resultURL:', url);
       })
       .catch(err => console.error(err));
-    }, 20000); //Wait for 10 seconds before making the call
+    }, 20000); //Wait for 20 seconds before making the call
   };
 
   useEffect(() => {  //runs when the ernestResponse prop changes
