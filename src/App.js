@@ -3,6 +3,7 @@ import CreateAvatarResponse from './components/api-calls-avatar/CreateAvatarResp
 import AvatarWelcomeModal from './components/modals/AvatarWelcomeModal';
 import Form from './components/modals/Form';
 import axios from 'axios';
+import SubmissionConfirmationModal from '../src/components/modals/SubmissionConfirmationModal';
 
 function App() {
 
@@ -58,9 +59,12 @@ function App() {
     };
   }, [ernestResponse]);
 
+  const [showListening, setCloseListening] = useState(true); 
+  const handleCloseListening = () => {
+    setCloseListening(false)
+  }
 
 //-----------code ends here-------------------------------------------------------------
-
 
 
   return (
@@ -68,6 +72,8 @@ function App() {
       {redirectActive === 1 && !ernestResponse && <AvatarWelcomeModal setRedirectActive={setRedirectActive} />}
       {redirectActive === 1 && ernestResponse && <CreateAvatarResponse setRedirectActive={setRedirectActive} ernestResponse={ernestResponse} />}
       {redirectActive === 2 && <Form onSubmit={handleFormSubmit} />}
+      {redirectActive === 2 && !ernestResponse && showListening && <SubmissionConfirmationModal closeModal={handleCloseListening} message="Try saying 'Hi Ernest' now. Ernest is listening, but may take time to respond. We appreciate your understanding."/>}
+      {redirectActive === 1 && ernestResponse && showListening && <SubmissionConfirmationModal closeModal={handleCloseListening} message="Oops, Ernest has to leave! He has a message for you before he goes though. Here it is, and we hoped you enjoyed his service."/>}
     </div>
   );
 }

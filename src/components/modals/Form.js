@@ -77,7 +77,6 @@ const FormApp = ({ onSubmit }) => {
 
   const handleCloseSubmissionModal = () => {
     setShowSuccessModal(false)
-    setShowListening(false)
     setFormData({
       name: '',
       email: '',
@@ -92,7 +91,6 @@ const FormApp = ({ onSubmit }) => {
   }
 
   const [showSuccessModal, setShowSuccessModal] = useState(false);
-  const [showListening, setShowListening] = useState(false);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '10px', marginLeft: '30px' }}>
@@ -101,9 +99,6 @@ const FormApp = ({ onSubmit }) => {
       <h1 style={{ justifyContent: 'center', color: 'darkblue' }}>Account Application Form</h1>
       <div>
         {showSuccessModal && <SubmissionConfirmationModal closeModal={handleCloseSubmissionModal} message="You have submitted your form successfully"/>}
-      </div>
-      <div>
-        {showListening && <SubmissionConfirmationModal closeModal={handleCloseSubmissionModal} message="Say 'Hi Ernest' for assistance at any time. Ernest is listening, but may take time to respond. We appreciate your understanding."/>}
       </div>
       <form onSubmit={handleSubmit} style={{ border: '1px solid black', background: 'white', padding: '35px' }}>
         <div style={{ display: 'flex', justifyContent: 'right', marginTop: '15px' }}>

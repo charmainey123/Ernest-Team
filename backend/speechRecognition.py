@@ -38,6 +38,10 @@ messages = [
 conversation_id = int(datetime.now().strftime("%Y%m%d%H%M%S"))
 
 # Define functions
+def speak(text):
+    engine.say(text)
+    engine.runAndWait()
+
 def generate_response(transcript):
     transcript += '\n\n===\n\n'
     messages.append({"role": "user", "content": transcript})
@@ -112,6 +116,7 @@ while True:
             print("You:\n", call)
 
             if 'ernest' in call or 'honest' in call or 'hyannis' in call or 'earnest' in call:
+                speak("I heard you called me. I can help with bank account recommendations. Please let me know more about yourself, especially your needs and lifestyle. This way, I can recommend one of our bank accounts that best complements your needs.")
                 trigger_response()
                 break
     except sr.UnknownValueError:
