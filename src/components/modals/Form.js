@@ -91,41 +91,6 @@ const FormApp = ({ onSubmit }) => {
     })
   }
 
-  useEffect(() => {
-    const executePythonScript = async () => {
-      try {
-        await fetch('http://localhost:5000/execute_voice_recognition', {
-          method: 'POST'
-        });
-        console.log('Voice recognition backend script executed successfully!');
-        setShowListening(true)
-      } catch (error) {
-        console.error('Error executing python script', error);
-      }
-    };
-    executePythonScript();
-  }, [])
-
-  const [ernestResponse, setErnestResponse] = useState('');
-  
-  useEffect(() => {
-    const interval = setInterval(() => {
-      fetch('../../../backend/response.txt')
-      .then(response => response.text())
-      .then(text => {
-        if (text !== ernestResponse) {
-          setErnestResponse(text);
-        }
-      })
-      .catch(error => {
-        console.error('Error reading file:', error);
-      });
-    }, 1000);
-    return () => {
-      clearInterval(interval);
-    };
-  }, [ernestResponse]);
-
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [showListening, setShowListening] = useState(false);
 
