@@ -68,7 +68,7 @@ function CreateAvatarResponse({ setRedirectActive, ernestResponse }) {
         console.log('resultURL:', url);
       })
       .catch(err => console.error(err));
-    }, 10000); //Wait for 10 seconds before making the call
+    }, 15000); //Wait for 10 seconds before making the call
   };
 
   useEffect(() => {  //runs when the ernestResponse prop changes
