@@ -4,6 +4,21 @@ import './form.css';
 import '../../styles/commonmodal.css'
 import '../modals/SubmissionConfirmationModal'
 import SubmissionConfirmationModal from '../modals/SubmissionConfirmationModal';
+import Box from '@mui/material/Box';
+import IconButton from '@mui/material/IconButton';
+import Input from '@mui/material/Input';
+import FilledInput from '@mui/material/FilledInput';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import InputAdornment from '@mui/material/InputAdornment';
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControl from '@mui/material/FormControl';
+import TextField from '@mui/material/TextField';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
+import Button from '@mui/material/Button';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
 
 const FormApp = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
@@ -27,6 +42,7 @@ const FormApp = ({ onSubmit }) => {
     cursor: 'pointer',
   };
 
+
   const handleInput = (title) => (event) => {
     const input = event.target;
     if (input.validity.valueMissing) {
@@ -36,13 +52,28 @@ const FormApp = ({ onSubmit }) => {
     }
   };
 
+  const [error, setError] = useState(false);
+
   const handleChange = (event) => {
     const { name, value } = event.target;
+    const regexPattern = /^[A-Za-z]{3}$/;
     setFormData((prevFormData) => ({
       ...prevFormData,
       [name]: value
     }));
+    if(!regexPattern.test(formData.currency) && formData.currency!=="") {
+    setError(true)
+  }
+    else {
+      setError(false)
+    }
   };
+
+  // const isValidInput = (value) => {
+  //   const regexPattern = /^[A-Za-z]{3}$/;
+  //   return regexPattern.test(value);
+  // };
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -90,20 +121,27 @@ const FormApp = ({ onSubmit }) => {
     })
   }
 
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#525355'
+      }
+    },
+  });
+
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '10px', marginLeft: '30px' }}>
-      {/* <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginTop: '70px', marginLeft: '30px'}}> */}
-
-      <h1 style={{ justifyContent: 'center', color: 'darkblue' }}>Account Application Form</h1>
+    
+    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '100px'}}>
       <div>
         {showSuccessModal && <SubmissionConfirmationModal closeModal={handleCloseSubmissionModal} message="You have submitted your form successfully"/>}
       </div>
-      <form onSubmit={handleSubmit} style={{ border: '1px solid black', background: 'white', padding: '35px' }}>
-        <div style={{ display: 'flex', justifyContent: 'right', marginTop: '15px' }}>
-          <label htmlFor="name">Full Name:</label>
-          <input style={{ marginLeft: '10px', width: '300px', height: '20px' }}
+      <form onSubmit={handleSubmit} style={{ borderStyle: 'solid', borderWidth: '1px', borderRadius: '5px', background: '#f5f8fa', padding: '35px', width: '100ch' }}>
+      <h1 style={{ justifyContent: 'center', color: '#525355', marginTop: '20px', marginLeft: '10px' }}>Account Application Form</h1>
+      <FormControl fullWidth sx={{ m: 1, height: '7ch'}} >
+      <InputLabel variant='filled'>Full Name</InputLabel>
+          <OutlinedInput
             type="text"
             id="name"
             name="name"
@@ -114,10 +152,10 @@ const FormApp = ({ onSubmit }) => {
             onInput={handleInput}
             required
           />
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'right', marginTop: '20px' }}>
-          <label htmlFor="email">Email Address:</label>
-          <input style={{ marginLeft: '10px', width: '300px', height: '20px' }}
+        </FormControl>
+        <FormControl sx={{ m: 1, width: '45ch', height: '7ch' }} variant="outlined">
+        <InputLabel variant='filled'>Email Address</InputLabel>
+          <OutlinedInput
             type="email"
             id="email"
             name="email"
@@ -129,10 +167,10 @@ const FormApp = ({ onSubmit }) => {
             // onInvalid={handleInvalid}
             required
           />
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'right', marginTop: '20px' }}>
-          <label htmlFor="mobile">Mobile Number:</label>
-          <input style={{ marginLeft: '10px', width: '300px', height: '20px' }}
+        </FormControl>
+        <FormControl sx={{ m: 1, width: '45ch', height: '7ch' }} variant="outlined">
+        <InputLabel variant='filled'>Mobile Number</InputLabel>
+          <OutlinedInput
             type="mobile"
             id="mobile"
             name="mobile"
@@ -143,10 +181,10 @@ const FormApp = ({ onSubmit }) => {
             onInput={handleInput}
             required
           />
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'right', marginTop: '20px' }}>
-          <label htmlFor="currency">Account Currency Code:</label>
-          <input style={{ marginLeft: '10px', width: '300px', height: '20px' }}
+        </FormControl>
+        <FormControl sx={{ m: 1, width: '45ch' }} variant="outlined">
+        <InputLabel variant='filled'>Account Currency Code</InputLabel>
+          <OutlinedInput
             type="currency"
             id="currency"
             name="currency"
@@ -156,16 +194,21 @@ const FormApp = ({ onSubmit }) => {
             value={formData.currency}
             onChange={handleChange}
             onInput={handleInput}
+            onBlur={handleChange}
+            error={error}
             required
           />
-        </div>
-        <div>
-          <p style={{ fontSize: '12px', justifyContent: 'center', marginLeft: '200px', marginTop: '0px' }}>Eg. SGD, USD, INR etc.</p>
-        </div>
+          <FormHelperText id="outlined-weight-helper-text">Eg. SGD, USD, INR etc.</FormHelperText>
+          {error && (
+        <FormHelperText error={error}>
+          Input should be three alphabetical characters.
+        </FormHelperText>
+      )}
+        </FormControl>
 
-        <div style={{ display: 'flex', justifyContent: 'right', marginTop: '20px' }}>
-          <label htmlFor="id">Identification Number:</label>
-          <input style={{ marginLeft: '10px', width: '300px', height: '20px' }}
+        <FormControl sx={{ m: 1, width: '45ch', height: '7ch' }} variant="outlined">
+        <InputLabel variant='filled'>Identification Number</InputLabel>
+          <OutlinedInput
             type="id"
             id="id"
             name="id"
@@ -177,10 +220,10 @@ const FormApp = ({ onSubmit }) => {
             onInput={handleInput}
             required
           />
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'right', marginTop: '20px' }}>
-          <label htmlFor="country">Country of Tax Residence:</label>
-          <input style={{ marginLeft: '10px', width: '300px', height: '20px' }}
+        </FormControl>
+        <FormControl sx={{ m: 1, width: '45ch', height: '7ch' }} variant="outlined">
+        <InputLabel variant='filled' htmlFor="country">Country</InputLabel>
+          <OutlinedInput
             type="country"
             id="country"
             name="country"
@@ -192,10 +235,11 @@ const FormApp = ({ onSubmit }) => {
             title="Maximum of 50 alphabetic characters."
             required
           />
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'right', marginTop: '20px' }}>
-          <label htmlFor="taxId">Tax Identification Number:</label>
-          <input style={{ marginLeft: '10px', width: '300px', height: '20px' }}
+        </FormControl>
+        
+        <FormControl sx={{ m: 1, width: '100ch', height: '7ch'}} variant="outlined">
+          <InputLabel variant='filled' htmlFor="taxId">Tax Identification Number</InputLabel>
+          <OutlinedInput
             type="taxId"
             id="taxId"
             name="taxId"
@@ -207,40 +251,43 @@ const FormApp = ({ onSubmit }) => {
             onChange={handleChange}
             required
           />
-        </div>
+        </FormControl>
 
-        <div style={{ display: 'flex', justifyContent: 'right', marginTop: '20px' }}>
-          <label htmlFor="purpose">Purpose Of Account :</label>
-          <select id="purpose" name="purpose" value={formData.purpose} onChange={handleOptionChange} required style={{ marginLeft: '10px', width: '310px', height: '25px' }}>
-            <option value="Savings">Savings</option>
-            <option value="Payroll">Payroll</option>
-            <option value="General/Personal Transactions">General/Personal Transactions</option>
-            <option value="Investment Purchases/Sales Proceeds">Investment Purchases/Sales Proceeds</option>
-            <option value="Instalment/Regular Payments">Instalment/Regular Payments</option>
-            <option value="International Payment/Transfers">International Payment/Transfers</option>
-          </select>
-        </div>
-        <div>
-          <p style={{ fontSize: '12px', justifyContent: 'center', marginLeft: '200px', marginTop: '0px' }}>Please select an option from the list.</p>
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'right', marginTop: '20px', marginLeft: '0px' }}>
-          <label htmlFor="type">Product Type:  </label>
-          <select id="type" name="type" value={formData.type} onChange={handleOptionChange} required style={{ marginLeft: '10px', marginRight: '0px', width: '310px', height: '25px' }}>
-            <option value="Savings – e$aver">Savings – e$aver</option>
-            <option value="Savings – MyWay:">Savings – MyWay</option>
-            <option value="Everyday Use – JumpStart Account:">Everyday Use – JumpStart Account</option>
-          </select>    <span className="info-icon" title="Say 'Hi Ernest' if you need help to recommend a product. 
-          Our avatar is here to assist you.">?</span>
-        </div>
+        <FormControl sx={{ m: 1, width: '100ch' }} variant="outlined">
+          <InputLabel variant='filled' htmlFor="purpose">Purpose Of Account</InputLabel>
+          <Select id="purpose" name="purpose" value={formData.purpose} onChange={handleOptionChange} required >
+            <MenuItem  value=""></MenuItem >
+            <MenuItem  value="Savings">Savings</MenuItem >
+            <MenuItem  value="Payroll">Payroll</MenuItem >
+            <MenuItem  value="General/Personal Transactions">General/Personal Transactions</MenuItem >
+            <MenuItem  value="Investment Purchases/Sales Proceeds">Investment Purchases/Sales Proceeds</MenuItem >
+            <MenuItem  value="Instalment/Regular Payments">Instalment/Regular Payments</MenuItem >
+            <MenuItem  value="International Payment/Transfers">International Payment/Transfers</MenuItem >
+          </Select>
+          <FormHelperText>Please select an option from the list
+          <span className="info-icon" title="Say 'Hi Ernest' if you need help to recommend a product. 
+          Our avatar is here to assist you.">?</span></FormHelperText>
+        </FormControl>
+      
+        <FormControl sx={{ m: 1, width: '100ch' }} variant="outlined">
+          <InputLabel variant='filled' htmlFor="type">Product Type </InputLabel>
+          <Select id="type" name="type" value={formData.type} onChange={handleOptionChange} required >
+            <MenuItem value=""></MenuItem >
+            <MenuItem value="Savings – e$aver">Savings – e$aver</MenuItem>
+            <MenuItem value="Savings – MyWay:">Savings – MyWay</MenuItem>
+            <MenuItem value="Everyday Use – JumpStart Account:">Everyday Use – JumpStart Account</MenuItem>
+          </Select>
+          <FormHelperText>Please select an option from the list</FormHelperText>
+        </FormControl>
 
-        <div>
-          <p style={{ fontSize: '12px', justifyContent: 'center', marginLeft: '200px', marginTop: '0px' }}>Please select an option from the list.</p>
-        </div>
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px' }}>
-          <button type="submit" style={buttonStyle}>Submit</button>
+        <ThemeProvider theme={theme}>
+          <Button type="submit" variant="outlined" color="primary">Submit</Button>
+          </ThemeProvider>
         </div>
       </form>
-    </div>
+      
+    </Box>
   );
 }
 

@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import "../../styles/commonmodal.css";
 import video from '../../videos/welcome-talk.mp4';
+import Box from '@mui/joy/Box';
+import Card from '@mui/joy/Card';
+import CardCover from '@mui/joy/CardCover';
+import CardContent from '@mui/joy/CardContent';
+import Typography from '@mui/joy/Typography';
 
 function AvatarWelcomeModal({ setRedirectActive }) {
 
@@ -27,13 +32,21 @@ function AvatarWelcomeModal({ setRedirectActive }) {
     return (
         <div>
             {avatarModalIsOpen && (
-                <div className="overlay">
-                    <div className="modal-content">
+                <Box
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '100vh',
+                  }}>
+                     <Card sx={{ height: '400px', width: '400px', }}>
+                     <CardCover>
                         <video controls autoPlay ref={videoRef} onEnded={handleAvatarVideoEnd}>
                             <source src={video} alt="Avatar Welcome Video" />
                         </video>
-                    </div>
-                </div>
+                        </CardCover>
+                    </Card>
+                </Box>
             )}
         </div>
     )
